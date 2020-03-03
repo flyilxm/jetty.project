@@ -8,4 +8,4 @@ websocket
 
 [depend]
 websocket-jetty
-websocket-javax
+websocket-jakarta

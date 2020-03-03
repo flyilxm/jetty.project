@@ -19,7 +19,7 @@
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty.websocket</groupId>
-      <artifactId>websocket-javax-common</artifactId>
+      <artifactId>websocket-jakarta-common</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
