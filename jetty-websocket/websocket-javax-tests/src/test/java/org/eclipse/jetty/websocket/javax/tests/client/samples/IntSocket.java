@@ -19,11 +19,11 @@
 package org.eclipse.jetty.websocket.javax.tests.client.samples;
 
 import java.io.IOException;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.EncodeException;
-import javax.websocket.OnMessage;
-import javax.websocket.Session;
 
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.Session;
 import org.eclipse.jetty.websocket.javax.tests.coders.BadDualDecoder;
 
 @ClientEndpoint(decoders = BadDualDecoder.class)

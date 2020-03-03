@@ -19,10 +19,10 @@
 package org.eclipse.jetty.websocket.javax.common;
 
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.OnError;
-import javax.websocket.Session;
 
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.OnError;
+import jakarta.websocket.Session;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.websocket.javax.common.sockets.TrackingSocket;
 import org.hamcrest.Matcher;

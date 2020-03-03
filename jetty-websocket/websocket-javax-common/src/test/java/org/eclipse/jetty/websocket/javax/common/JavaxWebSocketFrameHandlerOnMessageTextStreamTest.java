@@ -22,9 +22,9 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.OnMessage;
 
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.OnMessage;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.util.IO;
 import org.eclipse.jetty.websocket.core.Frame;

@@ -65,7 +65,7 @@ Use http://caniuse.com/websockets[caniuse.com/websockets] to find out.
 ____
 
 http://www.jcp.org/en/jsr/detail?id=356[JSR-356]::
-  The Java WebSocket API (`javax.websocket`)
+  The Java WebSocket API (`jakarta.websocket`)
 +
 This is the official Java API for working with WebSockets.
 
@@ -97,9 +97,9 @@ Jetty WebSocket Server API::
 Jetty WebSocket Client API::
   Connect to WebSocket servers with Jetty.
 Java WebSocket Client API::
-  The new standard Java WebSocket Client API (`javax.websocket`) [JSR-356]
+  The new standard Java WebSocket Client API (`jakarta.websocket`) [JSR-356]
 Java WebSocket Server API::
-  The new standard Java WebSocket Server API (`javax.websocket.server`) [JSR-356]
+  The new standard Java WebSocket Server API (`jakarta.websocket.server`) [JSR-356]
 
 === Enabling WebSocket
 

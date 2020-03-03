@@ -53,7 +53,7 @@ public class IdleTimeoutTest
     {
         server = new WSServer(MavenTestingUtils.getTargetTestingPath(IdleTimeoutTest.class.getName()), "app");
         server.copyWebInf("idle-timeout-config-web.xml");
-        // the endpoint (extends javax.websocket.Endpoint)
+        // the endpoint (extends jakarta.websocket.Endpoint)
         server.copyClass(IdleTimeoutOnOpenEndpoint.class);
         // the configuration that adds the endpoint
         server.copyClass(IdleTimeoutContextListener.class);

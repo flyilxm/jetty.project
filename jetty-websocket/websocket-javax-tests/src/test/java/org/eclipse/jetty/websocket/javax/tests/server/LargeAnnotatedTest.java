@@ -23,9 +23,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.toolchain.test.jupiter.WorkDir;
 import org.eclipse.jetty.toolchain.test.jupiter.WorkDirExtension;
 import org.eclipse.jetty.util.Callback;
@@ -43,7 +43,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 /**
- * Test Echo of Large messages, targeting the {@link javax.websocket.Session#setMaxTextMessageBufferSize(int)} functionality
+ * Test Echo of Large messages, targeting the {@link jakarta.websocket.Session#setMaxTextMessageBufferSize(int)} functionality
  */
 @ExtendWith(WorkDirExtension.class)
 public class LargeAnnotatedTest

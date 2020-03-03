@@ -18,7 +18,7 @@
 
 package org.eclipse.jetty.websocket.javax.common.coders.tests;
 
-import javax.websocket.Decoder;
+import jakarta.websocket.Decoder;
 
 /**
  * Testing scenario of an extended Decoder interface

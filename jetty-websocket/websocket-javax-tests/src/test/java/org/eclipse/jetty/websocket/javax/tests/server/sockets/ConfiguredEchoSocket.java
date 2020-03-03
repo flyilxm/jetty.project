@@ -20,13 +20,13 @@ package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
 import java.nio.ByteBuffer;
 import java.util.Locale;
-import javax.websocket.EndpointConfig;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.websocket.javax.tests.coders.DateDecoder;
 import org.eclipse.jetty.websocket.javax.tests.coders.TimeEncoder;
 import org.eclipse.jetty.websocket.javax.tests.server.configs.EchoSocketConfigurator;

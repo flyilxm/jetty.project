@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
-import javax.websocket.OnError;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnError;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/echo/error/throwable")
 public class BasicErrorThrowableSocket extends TrackingSocket

@@ -37,18 +37,18 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
-import javax.websocket.Extension;
-import javax.websocket.HandshakeResponse;
-import javax.websocket.OnMessage;
-import javax.websocket.Session;
-import javax.websocket.server.HandshakeRequest;
-import javax.websocket.server.ServerContainer;
-import javax.websocket.server.ServerEndpoint;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.Extension;
+import jakarta.websocket.HandshakeResponse;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.HandshakeRequest;
+import jakarta.websocket.server.ServerContainer;
+import jakarta.websocket.server.ServerEndpoint;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.http.HttpHeader;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.util.log.Log;
@@ -271,8 +271,8 @@ public class ConfiguratorTest
         public String onMessage(Session session, String msg)
         {
             StringBuilder response = new StringBuilder();
-            appendPropValue(session, response, "javax.websocket.endpoint.localAddress");
-            appendPropValue(session, response, "javax.websocket.endpoint.remoteAddress");
+            appendPropValue(session, response, "jakarta.websocket.endpoint.localAddress");
+            appendPropValue(session, response, "jakarta.websocket.endpoint.remoteAddress");
             appendPropValue(session, response, "found.local");
             appendPropValue(session, response, "found.remote");
             return response.toString();
@@ -566,8 +566,8 @@ public class ConfiguratorTest
             StringWriter expected = new StringWriter();
             PrintWriter out = new PrintWriter(expected);
             // local <-> remote are opposite on server (duh)
-            out.printf("[javax.websocket.endpoint.localAddress] = %s%n", toSafeAddr(expectedRemote));
-            out.printf("[javax.websocket.endpoint.remoteAddress] = %s%n", toSafeAddr(expectedLocal));
+            out.printf("[jakarta.websocket.endpoint.localAddress] = %s%n", toSafeAddr(expectedRemote));
+            out.printf("[jakarta.websocket.endpoint.remoteAddress] = %s%n", toSafeAddr(expectedLocal));
             out.printf("[found.local] = %s%n", toSafeAddr(expectedRemote));
             out.printf("[found.remote] = %s%n", toSafeAddr(expectedLocal));
 

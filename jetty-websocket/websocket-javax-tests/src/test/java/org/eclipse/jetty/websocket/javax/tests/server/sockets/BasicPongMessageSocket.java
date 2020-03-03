@@ -18,9 +18,9 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
-import javax.websocket.OnMessage;
-import javax.websocket.PongMessage;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.PongMessage;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/echo/pong")
 public class BasicPongMessageSocket extends TrackingSocket

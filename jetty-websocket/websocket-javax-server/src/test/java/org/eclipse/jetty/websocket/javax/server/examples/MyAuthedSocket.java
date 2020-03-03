@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.server.examples;
 
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/secured/socket", configurator = MyAuthedConfigurator.class)
 public class MyAuthedSocket

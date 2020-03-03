@@ -20,14 +20,14 @@ package org.eclipse.jetty.websocket.javax.tests.server;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.websocket.DeploymentException;
-import javax.websocket.server.ServerContainer;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.server.ServerContainer;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.websocket.javax.tests.server.sockets.idletimeout.OnOpenIdleTimeoutEndpoint;
 
 /**
- * Example of adding a server WebSocket (extending {@link javax.websocket.Endpoint}) programmatically via config
+ * Example of adding a server WebSocket (extending {@link jakarta.websocket.Endpoint}) programmatically via config
  */
 public class IdleTimeoutContextListener implements ServletContextListener
 {

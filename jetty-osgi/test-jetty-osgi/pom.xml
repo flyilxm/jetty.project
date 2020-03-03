@@ -316,7 +316,7 @@
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty.toolchain</groupId>
-      <artifactId>jetty-javax-websocket-api</artifactId>
+      <artifactId>jetty-jakarta-websocket-api</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>

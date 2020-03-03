@@ -27,8 +27,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
-import javax.websocket.Decoder;
 
+import jakarta.websocket.Decoder;
 import org.eclipse.jetty.toolchain.test.MavenTestingUtils;
 import org.eclipse.jetty.util.FutureCallback;
 import org.eclipse.jetty.websocket.core.Frame;
@@ -42,7 +42,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 /**
- * Test various {@link javax.websocket.Decoder.TextStream} scenarios
+ * Test various {@link jakarta.websocket.Decoder.TextStream} scenarios
  */
 public class DecoderTextStreamTest extends AbstractClientSessionTest
 {

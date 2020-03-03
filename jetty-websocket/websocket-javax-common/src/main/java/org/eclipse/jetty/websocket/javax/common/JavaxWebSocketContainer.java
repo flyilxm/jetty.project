@@ -25,9 +25,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Executor;
 import java.util.function.Consumer;
-import javax.websocket.Extension;
-import javax.websocket.WebSocketContainer;
 
+import jakarta.websocket.Extension;
+import jakarta.websocket.WebSocketContainer;
 import org.eclipse.jetty.io.ByteBufferPool;
 import org.eclipse.jetty.util.DecoratedObjectFactory;
 import org.eclipse.jetty.util.component.ContainerLifeCycle;
@@ -37,7 +37,7 @@ import org.eclipse.jetty.websocket.core.Configuration;
 import org.eclipse.jetty.websocket.core.WebSocketComponents;
 import org.eclipse.jetty.websocket.core.WebSocketExtensionRegistry;
 
-public abstract class JavaxWebSocketContainer extends ContainerLifeCycle implements javax.websocket.WebSocketContainer
+public abstract class JavaxWebSocketContainer extends ContainerLifeCycle implements jakarta.websocket.WebSocketContainer
 {
     private static final Logger LOG = Log.getLogger(JavaxWebSocketContainer.class);
     private final SessionTracker sessionTracker = new SessionTracker();
@@ -144,11 +144,11 @@ public abstract class JavaxWebSocketContainer extends ContainerLifeCycle impleme
     }
 
     /**
-     * Used in {@link javax.websocket.Session#getOpenSessions()}
+     * Used in {@link jakarta.websocket.Session#getOpenSessions()}
      *
      * @return the set of open sessions
      */
-    public Set<javax.websocket.Session> getOpenSessions()
+    public Set<jakarta.websocket.Session> getOpenSessions()
     {
         return sessionTracker.getSessions();
     }

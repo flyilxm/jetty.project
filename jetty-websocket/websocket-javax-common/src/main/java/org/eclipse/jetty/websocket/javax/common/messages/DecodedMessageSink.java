@@ -19,8 +19,8 @@
 package org.eclipse.jetty.websocket.javax.common.messages;
 
 import java.lang.invoke.MethodHandle;
-import javax.websocket.Decoder;
 
+import jakarta.websocket.Decoder;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;

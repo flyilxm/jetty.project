@@ -24,10 +24,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.websocket.Extension;
-import javax.websocket.Extension.Parameter;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.Extension;
+import jakarta.websocket.Extension.Parameter;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.http.pathmap.PathSpec;
 import org.eclipse.jetty.http.pathmap.UriTemplatePathSpec;
 import org.eclipse.jetty.util.StringUtil;
@@ -45,9 +45,9 @@ import org.eclipse.jetty.websocket.servlet.WebSocketCreator;
 
 public class JavaxWebSocketCreator implements WebSocketCreator
 {
-    public static final String PROP_REMOTE_ADDRESS = "javax.websocket.endpoint.remoteAddress";
-    public static final String PROP_LOCAL_ADDRESS = "javax.websocket.endpoint.localAddress";
-    public static final String PROP_LOCALES = "javax.websocket.upgrade.locales";
+    public static final String PROP_REMOTE_ADDRESS = "jakarta.websocket.endpoint.remoteAddress";
+    public static final String PROP_LOCAL_ADDRESS = "jakarta.websocket.endpoint.localAddress";
+    public static final String PROP_LOCALES = "jakarta.websocket.upgrade.locales";
     private static final Logger LOG = Log.getLogger(JavaxWebSocketCreator.class);
     private final JavaxWebSocketContainer containerScope;
     private final ServerEndpointConfig baseConfig;

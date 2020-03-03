@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.common.decoders;
 
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
 
 public abstract class AbstractDecoder implements Decoder
 {

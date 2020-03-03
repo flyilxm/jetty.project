@@ -21,9 +21,10 @@ package org.eclipse.jetty.websocket.javax.tests.coders;
 import java.nio.ByteBuffer;
 import java.text.DecimalFormat;
 import java.text.ParseException;
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
+
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
 
 /**
  * Example of a valid decoder impl declaring 2 decoders.

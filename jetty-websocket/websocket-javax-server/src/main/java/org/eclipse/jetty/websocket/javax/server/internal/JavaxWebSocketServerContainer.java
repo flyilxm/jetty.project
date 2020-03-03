@@ -23,10 +23,10 @@ import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.function.Function;
 import javax.servlet.ServletContext;
-import javax.websocket.DeploymentException;
-import javax.websocket.server.ServerEndpoint;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.server.ServerEndpoint;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.http.pathmap.PathSpec;
 import org.eclipse.jetty.http.pathmap.UriTemplatePathSpec;
@@ -44,9 +44,9 @@ import org.eclipse.jetty.websocket.javax.server.config.JavaxWebSocketServletCont
 import org.eclipse.jetty.websocket.servlet.WebSocketMapping;
 
 @ManagedObject("JSR356 Server Container")
-public class JavaxWebSocketServerContainer extends JavaxWebSocketClientContainer implements javax.websocket.server.ServerContainer, LifeCycle.Listener
+public class JavaxWebSocketServerContainer extends JavaxWebSocketClientContainer implements jakarta.websocket.server.ServerContainer, LifeCycle.Listener
 {
-    public static final String JAVAX_WEBSOCKET_CONTAINER_ATTRIBUTE = javax.websocket.server.ServerContainer.class.getName();
+    public static final String JAVAX_WEBSOCKET_CONTAINER_ATTRIBUTE = jakarta.websocket.server.ServerContainer.class.getName();
     private static final Logger LOG = Log.getLogger(JavaxWebSocketServerContainer.class);
 
     public static JavaxWebSocketServerContainer getContainer(ServletContext servletContext)
@@ -100,7 +100,7 @@ public class JavaxWebSocketServerContainer extends JavaxWebSocketClientContainer
             contextHandler.addManaged(container);
             contextHandler.addEventListener(container);
         }
-        // Store a reference to the ServerContainer per - javax.websocket spec 1.0 final - section 6.4: Programmatic Server Deployment
+        // Store a reference to the ServerContainer per - jakarta.websocket spec 1.0 final - section 6.4: Programmatic Server Deployment
         servletContext.setAttribute(JAVAX_WEBSOCKET_CONTAINER_ATTRIBUTE, container);
         return container;
     }

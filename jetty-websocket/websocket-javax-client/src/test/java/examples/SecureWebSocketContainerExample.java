@@ -22,10 +22,10 @@ import java.io.FileNotFoundException;
 import java.net.URI;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.ContainerProvider;
-import javax.websocket.WebSocketContainer;
 
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.WebSocketContainer;
 import org.eclipse.jetty.util.component.LifeCycle;
 
 public class SecureWebSocketContainerExample
@@ -53,7 +53,7 @@ public class SecureWebSocketContainerExample
         }
         finally
         {
-            /* Since javax.websocket clients have no defined LifeCycle we
+            /* Since jakarta.websocket clients have no defined LifeCycle we
              * want to either close/stop the client, or exit the JVM
              * via a System.exit(), otherwise the threads this client keeps
              * open will prevent the JVM from terminating naturally.
@@ -64,8 +64,8 @@ public class SecureWebSocketContainerExample
     }
 
     /**
-     * Since javax.websocket does not have an API for configuring SSL, each implementation
-     * of javax.websocket has to come up with their own SSL configuration mechanism.
+     * Since jakarta.websocket does not have an API for configuring SSL, each implementation
+     * of jakarta.websocket has to come up with their own SSL configuration mechanism.
      * <p>
      * When the {@link WebSocketContainer} is used it will need to create and start a Jetty WebSocket Client.
      * The {@code WebSocketClient} must use a Jetty {@code HttpClient} which can be configured for SSL, this
@@ -76,7 +76,7 @@ public class SecureWebSocketContainerExample
      * along with the jetty-xml artifact.
      * </p>
      * @return the client WebSocketContainer
-     * @see <a href="https://github.com/eclipse-ee4j/websocket-api/issues/210">javax.websocket issue #210</a>
+     * @see <a href="https://github.com/eclipse-ee4j/websocket-api/issues/210">jakarta.websocket issue #210</a>
      */
     public static WebSocketContainer getConfiguredWebSocketContainer() throws Exception
     {

@@ -24,14 +24,14 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Set;
-import javax.websocket.CloseReason;
-import javax.websocket.OnClose;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.RemoteEndpoint.Async;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.OnClose;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.RemoteEndpoint.Async;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.util.StringUtil;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
@@ -111,7 +111,7 @@ public class JsrBrowserSocket
             {
                 case "info":
                 {
-                    writeMessage("Using javax.websocket");
+                    writeMessage("Using jakarta.websocket");
                     if (StringUtil.isBlank(userAgent))
                     {
                         writeMessage("Client has no User-Agent");

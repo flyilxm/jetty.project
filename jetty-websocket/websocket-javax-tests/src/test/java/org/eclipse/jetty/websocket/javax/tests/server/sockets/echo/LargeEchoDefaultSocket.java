@@ -18,10 +18,10 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets.echo;
 
-import javax.websocket.OnMessage;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
+import jakarta.websocket.server.ServerEndpoint;
 
 /**
  * Annotated echo socket (default behavior as defined from {@link WebSocketContainer#setDefaultMaxTextMessageBufferSize(int)})

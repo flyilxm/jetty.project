@@ -18,9 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.common;
 
-import javax.websocket.SendHandler;
-import javax.websocket.SendResult;
-
+import jakarta.websocket.SendHandler;
+import jakarta.websocket.SendResult;
 import org.eclipse.jetty.util.Callback;
 
 /**

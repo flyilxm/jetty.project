@@ -18,8 +18,7 @@
 
 package org.eclipse.jetty.websocket.javax.server.internal;
 
-import javax.websocket.server.ServerEndpointConfig;
-
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.websocket.javax.common.ServerEndpointConfigWrapper;
 import org.eclipse.jetty.websocket.javax.server.config.ContainerDefaultConfigurator;
 

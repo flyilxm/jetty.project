@@ -20,11 +20,11 @@ package org.eclipse.jetty.test.websocket;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ContainerProvider;
-import javax.websocket.RemoteEndpoint;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
 
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.RemoteEndpoint;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
 import org.eclipse.jetty.http.HttpScheme;
 import org.eclipse.jetty.test.support.XmlBasedJettyServer;
 import org.eclipse.jetty.websocket.api.util.WSURI;
@@ -63,7 +63,7 @@ public class JavaxWebSocketTest
     @Test
     public void testChatEndpoint() throws Exception
     {
-        URI uri = WSURI.toWebsocket(server.getServerURI().resolve("/test-jetty-webapp/javax.websocket"));
+        URI uri = WSURI.toWebsocket(server.getServerURI().resolve("/test-jetty-webapp/jakarta.websocket"));
 
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
 

@@ -26,14 +26,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerContainer;
-import javax.websocket.server.ServerEndpoint;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerContainer;
+import jakarta.websocket.server.ServerEndpoint;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.websocket.core.CloseStatus;
@@ -53,7 +53,7 @@ public class SessionTest
     public static class SessionInfoSocket
     {
         @OnMessage
-        public String onMessage(javax.websocket.Session session, String message)
+        public String onMessage(jakarta.websocket.Session session, String message)
         {
             if ("pathParams".equalsIgnoreCase(message))
             {
@@ -105,10 +105,10 @@ public class SessionTest
 
     public static class SessionInfoEndpoint extends Endpoint implements MessageHandler.Whole<String>
     {
-        private javax.websocket.Session session;
+        private jakarta.websocket.Session session;
 
         @Override
-        public void onOpen(javax.websocket.Session session, EndpointConfig config)
+        public void onOpen(jakarta.websocket.Session session, EndpointConfig config)
         {
             this.session = session;
             this.session.addMessageHandler(this);

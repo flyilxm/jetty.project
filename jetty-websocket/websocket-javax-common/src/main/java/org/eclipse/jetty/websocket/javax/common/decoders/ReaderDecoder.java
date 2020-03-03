@@ -20,9 +20,10 @@ package org.eclipse.jetty.websocket.javax.common.decoders;
 
 import java.io.IOException;
 import java.io.Reader;
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
+
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
 
 public class ReaderDecoder implements Decoder.TextStream<Reader>
 {

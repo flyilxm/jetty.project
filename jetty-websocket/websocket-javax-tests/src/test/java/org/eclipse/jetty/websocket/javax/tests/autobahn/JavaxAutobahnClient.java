@@ -20,8 +20,8 @@ package org.eclipse.jetty.websocket.javax.tests.autobahn;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.CloseReason;
 
+import jakarta.websocket.CloseReason;
 import org.eclipse.jetty.util.Jetty;
 import org.eclipse.jetty.util.UrlEncoded;
 import org.eclipse.jetty.util.component.LifeCycle;

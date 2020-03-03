@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.common.decoders;
 
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
 
 /**
  * Default implementation of the Text Message to {@link Float} decoder

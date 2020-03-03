@@ -19,10 +19,10 @@
 package org.eclipse.jetty.websocket.javax.tests.client;
 
 import java.util.concurrent.TimeUnit;
-import javax.websocket.EndpointConfig;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.websocket.core.exception.WebSocketWriteTimeoutException;
 import org.eclipse.jetty.websocket.javax.client.JavaxWebSocketClientContainer;
 import org.eclipse.jetty.websocket.javax.common.JavaxWebSocketContainer;

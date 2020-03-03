@@ -20,9 +20,9 @@ package org.eclipse.jetty.websocket.javax.common;
 
 import java.util.HashMap;
 import java.util.Map;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.EndpointConfig;
 
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.EndpointConfig;
 import org.eclipse.jetty.websocket.core.CoreSession;
 import org.eclipse.jetty.websocket.javax.common.decoders.AvailableDecoders;
 import org.eclipse.jetty.websocket.javax.common.encoders.AvailableEncoders;

@@ -20,12 +20,12 @@ package org.eclipse.jetty.websocket.javax.server.internal;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
-import javax.websocket.server.PathParam;
 
+import jakarta.websocket.server.PathParam;
 import org.eclipse.jetty.websocket.util.InvokerUtils;
 
 /**
- * Method argument identifier for {@link javax.websocket.server.PathParam} annotations.
+ * Method argument identifier for {@link jakarta.websocket.server.PathParam} annotations.
  */
 @SuppressWarnings("unused")
 public class PathParamIdentifier implements InvokerUtils.ParamIdentifier

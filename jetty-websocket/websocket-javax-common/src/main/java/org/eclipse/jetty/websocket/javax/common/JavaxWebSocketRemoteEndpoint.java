@@ -22,10 +22,10 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.EncodeException;
-import javax.websocket.Encoder;
-import javax.websocket.SendHandler;
 
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.Encoder;
+import jakarta.websocket.SendHandler;
 import org.eclipse.jetty.util.BufferUtil;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.util.FutureCallback;
@@ -39,7 +39,7 @@ import org.eclipse.jetty.websocket.core.exception.WebSocketException;
 import org.eclipse.jetty.websocket.util.messages.MessageOutputStream;
 import org.eclipse.jetty.websocket.util.messages.MessageWriter;
 
-public class JavaxWebSocketRemoteEndpoint implements javax.websocket.RemoteEndpoint, OutgoingFrames
+public class JavaxWebSocketRemoteEndpoint implements jakarta.websocket.RemoteEndpoint, OutgoingFrames
 {
     private static final Logger LOG = Log.getLogger(JavaxWebSocketRemoteEndpoint.class);
 

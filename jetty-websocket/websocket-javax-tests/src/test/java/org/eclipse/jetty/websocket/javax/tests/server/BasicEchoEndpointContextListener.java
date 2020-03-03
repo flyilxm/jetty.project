@@ -20,14 +20,14 @@ package org.eclipse.jetty.websocket.javax.tests.server;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.websocket.DeploymentException;
-import javax.websocket.server.ServerContainer;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.server.ServerContainer;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.websocket.javax.tests.server.sockets.pong.PongMessageEndpoint;
 
 /**
- * Example of adding a server WebSocket (extending {@link javax.websocket.Endpoint}) programmatically directly.
+ * Example of adding a server WebSocket (extending {@link jakarta.websocket.Endpoint}) programmatically directly.
  * <p>
  * NOTE: this shouldn't work as the endpoint has no path associated with it.
  */

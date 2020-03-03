@@ -28,14 +28,14 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.CloseReason;
-import javax.websocket.ContainerProvider;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
 
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
 import org.eclipse.jetty.util.BufferUtil;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.util.component.LifeCycle;
@@ -62,7 +62,7 @@ import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 
 /**
- * This class tests receiving of messages by different types of {@link javax.websocket.MessageHandler}
+ * This class tests receiving of messages by different types of {@link jakarta.websocket.MessageHandler}
  */
 public class MessageReceivingTest
 {
@@ -104,7 +104,7 @@ public class MessageReceivingTest
     public void testPartialBinaryMessage() throws Exception
     {
         final TestEndpoint clientEndpoint = new TestEndpoint(new PartialByteBufferCaptureHandler());
-        assertThat(clientEndpoint, instanceOf(javax.websocket.Endpoint.class));
+        assertThat(clientEndpoint, instanceOf(jakarta.websocket.Endpoint.class));
 
         ClientEndpointConfig clientConfig = ClientEndpointConfig.Builder.create()
             .preferredSubprotocols(Collections.singletonList("partial-binary"))
@@ -147,7 +147,7 @@ public class MessageReceivingTest
     public void testPartialTextMessage() throws Exception
     {
         final TestEndpoint clientEndpoint = new TestEndpoint(new PartialStringCaptureHandler());
-        assertThat(clientEndpoint, instanceOf(javax.websocket.Endpoint.class));
+        assertThat(clientEndpoint, instanceOf(jakarta.websocket.Endpoint.class));
 
         ClientEndpointConfig clientConfig = ClientEndpointConfig.Builder.create()
             .preferredSubprotocols(Collections.singletonList("partial-text"))
@@ -179,7 +179,7 @@ public class MessageReceivingTest
     public void testWholeBinaryMessage() throws Exception
     {
         final TestEndpoint clientEndpoint = new TestEndpoint(new WholeByteBufferCaptureHandler());
-        assertThat(clientEndpoint, instanceOf(javax.websocket.Endpoint.class));
+        assertThat(clientEndpoint, instanceOf(jakarta.websocket.Endpoint.class));
 
         ClientEndpointConfig clientConfig = ClientEndpointConfig.Builder.create()
             .preferredSubprotocols(Collections.singletonList("echo"))
@@ -209,7 +209,7 @@ public class MessageReceivingTest
     public void testWholeTextMessage() throws Exception
     {
         final TestEndpoint clientEndpoint = new TestEndpoint(new WholeStringCaptureHandler());
-        assertThat(clientEndpoint, instanceOf(javax.websocket.Endpoint.class));
+        assertThat(clientEndpoint, instanceOf(jakarta.websocket.Endpoint.class));
 
         ClientEndpointConfig clientConfig = ClientEndpointConfig.Builder.create()
             .preferredSubprotocols(Collections.singletonList("echo"))
@@ -421,7 +421,7 @@ public class MessageReceivingTest
     /**
      * Abstract message handler implementation, used for tests.
      */
-    private abstract static class AbstractHandler implements javax.websocket.MessageHandler
+    private abstract static class AbstractHandler implements jakarta.websocket.MessageHandler
     {
         public final BlockingQueue<String> messageQueue = new LinkedBlockingDeque<>();
     }
@@ -430,7 +430,7 @@ public class MessageReceivingTest
      * Partial message handler for receiving binary messages.
      */
     public static class PartialByteBufferCaptureHandler extends AbstractHandler implements
-        javax.websocket.MessageHandler.Partial<ByteBuffer>
+        jakarta.websocket.MessageHandler.Partial<ByteBuffer>
     {
         /**
          * Parts of the current message. This list is appended with every non-last part and is
@@ -472,7 +472,7 @@ public class MessageReceivingTest
      * Whole message handler for receiving binary messages.
      */
     public static class WholeByteBufferCaptureHandler extends AbstractHandler implements
-        javax.websocket.MessageHandler.Whole<ByteBuffer>
+        jakarta.websocket.MessageHandler.Whole<ByteBuffer>
     {
         @Override
         public void onMessage(ByteBuffer message)
@@ -486,7 +486,7 @@ public class MessageReceivingTest
      * Partial message handler for receiving text messages.
      */
     public static class PartialStringCaptureHandler extends AbstractHandler implements
-        javax.websocket.MessageHandler.Partial<String>
+        jakarta.websocket.MessageHandler.Partial<String>
     {
         /**
          * Parts of the current message. This list is appended with every non-last part and is
@@ -510,7 +510,7 @@ public class MessageReceivingTest
      * Whole message handler for receiving text messages.
      */
     public static class WholeStringCaptureHandler extends AbstractHandler implements
-        javax.websocket.MessageHandler.Whole<String>
+        jakarta.websocket.MessageHandler.Whole<String>
     {
         @Override
         public void onMessage(String message)

@@ -20,8 +20,9 @@ package com.acme.websocket;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.websocket.DeploymentException;
-import javax.websocket.server.ServerEndpointConfig;
+
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.server.ServerEndpointConfig;
 
 public class BasicEchoEndpointConfigContextListener implements ServletContextListener
 {
@@ -34,8 +35,8 @@ public class BasicEchoEndpointConfigContextListener implements ServletContextLis
     @Override
     public void contextInitialized(ServletContextEvent sce)
     {
-        javax.websocket.server.ServerContainer container = (javax.websocket.server.ServerContainer)sce.getServletContext()
-            .getAttribute(javax.websocket.server.ServerContainer.class.getName());
+        jakarta.websocket.server.ServerContainer container = (jakarta.websocket.server.ServerContainer)sce.getServletContext()
+            .getAttribute(jakarta.websocket.server.ServerContainer.class.getName());
         if (container == null)
             throw new IllegalStateException("No Websocket ServerContainer in " + sce.getServletContext());
 

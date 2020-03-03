@@ -23,8 +23,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.http.HttpHeader;
 import org.eclipse.jetty.websocket.core.CloseStatus;
 import org.eclipse.jetty.websocket.core.Frame;

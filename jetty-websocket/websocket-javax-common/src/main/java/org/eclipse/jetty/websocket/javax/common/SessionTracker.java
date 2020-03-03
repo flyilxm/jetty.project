@@ -22,9 +22,9 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-import javax.websocket.CloseReason;
-import javax.websocket.Session;
 
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.Session;
 import org.eclipse.jetty.util.component.AbstractLifeCycle;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;

@@ -23,11 +23,11 @@ import java.net.URI;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.CloseReason;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.toolchain.test.jupiter.WorkDir;
 import org.eclipse.jetty.toolchain.test.jupiter.WorkDirExtension;
 import org.eclipse.jetty.util.Callback;
@@ -50,7 +50,7 @@ public class OnMessageReturnTest
     @ServerEndpoint(value = "/echoreturn")
     public static class EchoReturnEndpoint
     {
-        private javax.websocket.Session session = null;
+        private jakarta.websocket.Session session = null;
         public CloseReason close = null;
         public LinkedBlockingQueue<String> messageQueue = new LinkedBlockingQueue<>();
 
@@ -68,7 +68,7 @@ public class OnMessageReturnTest
         }
 
         @OnOpen
-        public void onOpen(javax.websocket.Session session)
+        public void onOpen(jakarta.websocket.Session session)
         {
             this.session = session;
         }

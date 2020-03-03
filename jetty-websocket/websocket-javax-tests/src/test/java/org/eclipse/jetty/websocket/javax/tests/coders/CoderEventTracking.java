@@ -21,11 +21,12 @@ package org.eclipse.jetty.websocket.javax.tests.coders;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import javax.websocket.Decoder;
-import javax.websocket.Encoder;
+
+import jakarta.websocket.Decoder;
+import jakarta.websocket.Encoder;
 
 /**
- * Singleton used for tracking events of {@link javax.websocket.Decoder} and {@link javax.websocket.Encoder}
+ * Singleton used for tracking events of {@link jakarta.websocket.Decoder} and {@link jakarta.websocket.Encoder}
  */
 public class CoderEventTracking
 {

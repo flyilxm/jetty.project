@@ -18,7 +18,7 @@
 
 package org.eclipse.jetty.websocket.javax.common.handlers;
 
-import javax.websocket.MessageHandler;
+import jakarta.websocket.MessageHandler;
 
 public class ByteArrayWholeHandler implements MessageHandler.Whole<byte[]>
 {

@@ -21,10 +21,10 @@ package org.eclipse.jetty.websocket.javax.server.examples;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
-import javax.websocket.OnMessage;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.util.IO;
 
 @ServerEndpoint("/echo")

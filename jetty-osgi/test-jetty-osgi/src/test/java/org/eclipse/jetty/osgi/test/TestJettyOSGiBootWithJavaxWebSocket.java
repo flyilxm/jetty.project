@@ -23,11 +23,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.inject.Inject;
-import javax.websocket.ContainerProvider;
-import javax.websocket.RemoteEndpoint;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
 
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.RemoteEndpoint;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.Configuration;
@@ -115,14 +115,14 @@ public class TestJettyOSGiBootWithJavaxWebSocket
         if (Boolean.getBoolean(TestOSGiUtil.BUNDLE_DEBUG))
             assertAllBundlesActiveOrResolved();
 
-        String port = System.getProperty("boot.javax.websocket.port");
+        String port = System.getProperty("boot.jakarta.websocket.port");
         assertNotNull(port);
 
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
         assertNotNull(container);
 
         SimpleJavaxWebSocket socket = new SimpleJavaxWebSocket();
-        URI uri = new URI("ws://127.0.0.1:" + port + "/javax.websocket/");
+        URI uri = new URI("ws://127.0.0.1:" + port + "/jakarta.websocket/");
         try (Session session = container.connectToServer(socket, uri))
         {
             RemoteEndpoint.Basic remote = session.getBasicRemote();

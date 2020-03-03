@@ -23,9 +23,9 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.http.HttpVersion;
 import org.eclipse.jetty.http.pathmap.PathSpec;
 import org.eclipse.jetty.io.ByteBufferPool;

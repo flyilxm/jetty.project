@@ -18,8 +18,7 @@
 
 package org.eclipse.jetty.websocket.javax.tests.coders;
 
-import javax.websocket.DecodeException;
-
+import jakarta.websocket.DecodeException;
 import org.eclipse.jetty.websocket.javax.common.decoders.FloatDecoder;
 import org.junit.jupiter.api.Test;
 

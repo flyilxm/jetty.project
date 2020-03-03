@@ -20,9 +20,9 @@ package org.eclipse.jetty.websocket.javax.tests.server;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.websocket.DeploymentException;
-import javax.websocket.server.ServerContainer;
 
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.server.ServerContainer;
 import org.eclipse.jetty.websocket.javax.tests.server.sockets.echo.BasicEchoSocket;
 
 /**

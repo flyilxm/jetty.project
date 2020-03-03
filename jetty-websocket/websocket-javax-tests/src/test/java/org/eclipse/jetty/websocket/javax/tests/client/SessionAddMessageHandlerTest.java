@@ -21,10 +21,10 @@ package org.eclipse.jetty.websocket.javax.tests.client;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.MessageHandler;
 
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.MessageHandler;
 import org.eclipse.jetty.util.BufferUtil;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.websocket.core.CoreSession;
@@ -216,7 +216,7 @@ public class SessionAddMessageHandlerTest
     }
 
     /**
-     * Test Java 8 Lamba of {@link javax.websocket.MessageHandler.Whole}
+     * Test Java 8 Lamba of {@link jakarta.websocket.MessageHandler.Whole}
      */
     @Test
     public void testMessageHandler11WholeLambda() throws Exception
@@ -241,7 +241,7 @@ public class SessionAddMessageHandlerTest
     }
 
     /**
-     * Test Java 8 Lamba of {@link javax.websocket.MessageHandler.Partial}
+     * Test Java 8 Lamba of {@link jakarta.websocket.MessageHandler.Partial}
      */
     @Test
     public void testMessageHandler11PartialLambda() throws Exception

@@ -24,13 +24,13 @@ import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.HandlesTypes;
-import javax.websocket.DeploymentException;
-import javax.websocket.Endpoint;
-import javax.websocket.server.ServerApplicationConfig;
-import javax.websocket.server.ServerContainer;
-import javax.websocket.server.ServerEndpoint;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.server.ServerApplicationConfig;
+import jakarta.websocket.server.ServerContainer;
+import jakarta.websocket.server.ServerEndpoint;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.listener.ContainerInitializer;
@@ -48,9 +48,9 @@ public class JavaxWebSocketServletContainerInitializer implements ServletContain
 {
     /**
      * The ServletContext attribute key name for the
-     * ServerContainer per javax.websocket spec 1.0 final section 6.4 Programmatic Server Deployment
+     * ServerContainer per jakarta.websocket spec 1.0 final section 6.4 Programmatic Server Deployment
      */
-    public static final String ATTR_JAVAX_SERVER_CONTAINER = javax.websocket.server.ServerContainer.class.getName();
+    public static final String ATTR_JAVAX_SERVER_CONTAINER = jakarta.websocket.server.ServerContainer.class.getName();
 
     public static final String ENABLE_KEY = "org.eclipse.jetty.websocket.javax";
     public static final String HTTPCLIENT_ATTRIBUTE = "org.eclipse.jetty.websocket.javax.HttpClient";
@@ -142,7 +142,7 @@ public class JavaxWebSocketServletContainerInitializer implements ServletContain
      * <p>
      * There is no enablement check here, and no automatic deployment of endpoints at this point
      * in time.  It merely sets up the {@link ServletContext} so with the basics needed to start
-     * configuring for `javax.websocket.server` based endpoints.
+     * configuring for `jakarta.websocket.server` based endpoints.
      * </p>
      *
      * @param context the context to work with

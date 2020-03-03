@@ -18,10 +18,10 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
-import javax.websocket.CloseReason;
-import javax.websocket.OnClose;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.OnClose;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/echo/close/reason/session")
 public class BasicCloseReasonSessionSocket extends TrackingSocket

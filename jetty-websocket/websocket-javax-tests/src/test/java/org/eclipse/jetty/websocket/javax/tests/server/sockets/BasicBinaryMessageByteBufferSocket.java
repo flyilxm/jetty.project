@@ -19,8 +19,9 @@
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
 import java.nio.ByteBuffer;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
+
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/basic")
 public class BasicBinaryMessageByteBufferSocket extends TrackingSocket

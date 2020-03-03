@@ -20,10 +20,10 @@ package org.eclipse.jetty.websocket.javax.tests.coders;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
-import javax.websocket.EncodeException;
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
 
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.Encoder;
+import jakarta.websocket.EndpointConfig;
 import org.eclipse.jetty.util.BufferUtil;
 
 public class FruitBinaryEncoder implements Encoder.Binary<Fruit>

@@ -18,14 +18,14 @@
 
 package com.acme.websocket;
 
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/echo/large")
 public class LargeEchoDefaultSocket
 {
     @OnMessage
-    public void echo(javax.websocket.Session session, String msg)
+    public void echo(jakarta.websocket.Session session, String msg)
     {
         // reply with echo
         session.getAsyncRemote().sendText(msg);

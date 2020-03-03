@@ -8,7 +8,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>websocket-javax-client</artifactId>
-  <name>Jetty :: Websocket :: javax.websocket :: Client</name>
+  <name>Jetty :: Websocket :: jakarta.websocket :: Client</name>
 
   <properties>
     <bundle-symbolic-name>${project.groupId}.javax.client</bundle-symbolic-name>
@@ -32,7 +32,7 @@
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty.toolchain</groupId>
-      <artifactId>jetty-javax-websocket-api</artifactId>
+      <artifactId>jetty-jakarta-websocket-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
@@ -60,7 +60,7 @@
             </goals>
             <configuration>
               <instructions>
-                <Bundle-Description>javax.websocket.client Implementation</Bundle-Description>
+                <Bundle-Description>jakarta.websocket.client Implementation</Bundle-Description>
                 <Export-Package>
                   org.eclipse.jetty.websocket.javax.client.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"
                 </Export-Package>
@@ -68,7 +68,7 @@
                   osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)";resolution:=optional
                 </Require-Capability>
                 <Provide-Capability>
-                  osgi.serviceloader;osgi.serviceloader=javax.websocket.ContainerProvider
+                  osgi.serviceloader;osgi.serviceloader=jakarta.websocket.ContainerProvider
                 </Provide-Capability>
               </instructions>
             </configuration>

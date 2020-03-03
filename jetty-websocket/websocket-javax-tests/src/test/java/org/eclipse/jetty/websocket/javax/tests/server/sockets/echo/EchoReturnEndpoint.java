@@ -20,11 +20,12 @@ package org.eclipse.jetty.websocket.javax.tests.server.sockets.echo;
 
 import java.io.IOException;
 import java.util.concurrent.LinkedBlockingQueue;
-import javax.websocket.CloseReason;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
+
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/echoreturn")
 public class EchoReturnEndpoint

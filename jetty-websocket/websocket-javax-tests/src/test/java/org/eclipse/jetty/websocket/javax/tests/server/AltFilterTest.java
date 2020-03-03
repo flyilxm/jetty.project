@@ -52,7 +52,7 @@ public class AltFilterTest
     {
         WSServer wsb = new WSServer(testdir.getPath(), "app");
         wsb.copyWebInf("alt-filter-web.xml");
-        // the endpoint (extends javax.websocket.Endpoint)
+        // the endpoint (extends jakarta.websocket.Endpoint)
         wsb.copyClass(BasicEchoSocket.class);
 
         try

@@ -23,9 +23,9 @@ import java.io.OutputStream;
 import java.io.Writer;
 import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.EncodeException;
-import javax.websocket.RemoteEndpoint;
 
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.RemoteEndpoint;
 import org.eclipse.jetty.util.BufferUtil;
 import org.eclipse.jetty.util.FutureCallback;
 import org.eclipse.jetty.util.log.Log;

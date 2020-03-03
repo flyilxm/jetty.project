@@ -22,16 +22,16 @@ import java.net.URI;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.ContainerProvider;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.RemoteEndpoint;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.RemoteEndpoint;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.websocket.javax.tests.LocalServer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -44,7 +44,7 @@ public class JsrBatchModeTest
 {
     public static class BasicEchoEndpoint extends Endpoint implements MessageHandler.Whole<String>
     {
-        private javax.websocket.Session session;
+        private jakarta.websocket.Session session;
 
         @Override
         public void onMessage(String msg)
@@ -54,7 +54,7 @@ public class JsrBatchModeTest
         }
 
         @Override
-        public void onOpen(javax.websocket.Session session, EndpointConfig config)
+        public void onOpen(jakarta.websocket.Session session, EndpointConfig config)
         {
             this.session = session;
             this.session.addMessageHandler(this);

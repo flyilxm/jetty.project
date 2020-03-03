@@ -20,13 +20,14 @@ package org.eclipse.jetty.websocket.javax.tests.client.misbehaving;
 
 import java.util.LinkedList;
 import java.util.concurrent.CountDownLatch;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.CloseReason;
-import javax.websocket.EndpointConfig;
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
+
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.OnClose;
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
 
 /**
  * A JSR-356 Annotated that tosses a RuntimeException during its onOpen call

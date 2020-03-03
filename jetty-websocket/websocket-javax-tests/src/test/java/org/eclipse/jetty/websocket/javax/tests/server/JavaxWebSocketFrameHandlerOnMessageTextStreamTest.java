@@ -23,10 +23,10 @@ import java.io.Reader;
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
-import javax.websocket.OnMessage;
-import javax.websocket.server.PathParam;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.PathParam;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.util.Callback;
 import org.eclipse.jetty.util.IO;
 import org.eclipse.jetty.websocket.core.CoreSession;

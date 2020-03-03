@@ -18,9 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.client;
 
-import javax.websocket.ContainerProvider;
-import javax.websocket.WebSocketContainer;
-
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.WebSocketContainer;
 import org.eclipse.jetty.util.component.LifeCycle;
 import org.eclipse.jetty.util.thread.ShutdownThread;
 
@@ -28,7 +27,7 @@ import org.eclipse.jetty.util.thread.ShutdownThread;
  * Client {@link ContainerProvider} implementation.
  * <p>
  * Created by a {@link java.util.ServiceLoader} call in the
- * {@link javax.websocket.ContainerProvider#getWebSocketContainer()} call.
+ * {@link jakarta.websocket.ContainerProvider#getWebSocketContainer()} call.
  * </p>
  */
 public class JavaxWebSocketClientContainerProvider extends ContainerProvider
@@ -47,9 +46,9 @@ public class JavaxWebSocketClientContainerProvider extends ContainerProvider
      * <p>
      * <em>NOTE: A WebSocket Client Container is a heavyweight object.</em>
      * It is dangerous to repeatedly request a new container, or to manage many containers.
-     * The existing javax.websocket API has no lifecycle for a ClientContainer, once started
+     * The existing jakarta.websocket API has no lifecycle for a ClientContainer, once started
      * they exist for the duration of the JVM with no ability to stop them.
-     * See/Comment on <a href="https://github.com/javaee/websocket-spec/issues/212">javax.websocket Issue #212</a>
+     * See/Comment on <a href="https://github.com/javaee/websocket-spec/issues/212">jakarta.websocket Issue #212</a>
      * if this is a big concern for you.
      * </p>
      */

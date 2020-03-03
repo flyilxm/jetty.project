@@ -21,16 +21,16 @@ package org.eclipse.jetty.websocket.javax.tests.client;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.ContainerProvider;
-import javax.websocket.EndpointConfig;
-import javax.websocket.HandshakeResponse;
-import javax.websocket.MessageHandler;
-import javax.websocket.OnMessage;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.HandshakeResponse;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.websocket.javax.tests.LocalServer;
 import org.eclipse.jetty.websocket.javax.tests.WSEndpointTracker;
 import org.junit.jupiter.api.AfterAll;
@@ -42,7 +42,7 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.core.Is.is;
 
 /**
- * Tests of {@link javax.websocket.ClientEndpointConfig.Configurator}
+ * Tests of {@link jakarta.websocket.ClientEndpointConfig.Configurator}
  */
 public class ConfiguratorTest
 {

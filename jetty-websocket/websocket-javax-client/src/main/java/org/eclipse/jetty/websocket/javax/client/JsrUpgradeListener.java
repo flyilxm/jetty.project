@@ -23,9 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
-import javax.websocket.ClientEndpointConfig.Configurator;
-import javax.websocket.HandshakeResponse;
 
+import jakarta.websocket.ClientEndpointConfig.Configurator;
+import jakarta.websocket.HandshakeResponse;
 import org.eclipse.jetty.client.HttpRequest;
 import org.eclipse.jetty.client.HttpResponse;
 import org.eclipse.jetty.http.HttpFields;

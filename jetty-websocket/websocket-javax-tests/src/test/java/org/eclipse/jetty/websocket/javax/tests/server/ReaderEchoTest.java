@@ -22,11 +22,11 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.server.PathParam;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.PathParam;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.util.IO;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
@@ -40,7 +40,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test various {@link javax.websocket.Decoder.TextStream Decoder.TextStream} and {@link javax.websocket.Encoder.TextStream Encoder.TextStream} echo behavior of Java Readers
+ * Test various {@link jakarta.websocket.Decoder.TextStream Decoder.TextStream} and {@link jakarta.websocket.Encoder.TextStream Encoder.TextStream} echo behavior of Java Readers
  */
 public class ReaderEchoTest
 {

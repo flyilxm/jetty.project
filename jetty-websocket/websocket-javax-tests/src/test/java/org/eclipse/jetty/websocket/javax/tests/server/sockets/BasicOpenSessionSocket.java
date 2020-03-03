@@ -18,9 +18,9 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/echo/onOpen/session")
 public class BasicOpenSessionSocket extends TrackingSocket

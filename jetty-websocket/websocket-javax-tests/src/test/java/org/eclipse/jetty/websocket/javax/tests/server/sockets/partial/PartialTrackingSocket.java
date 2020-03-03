@@ -19,9 +19,9 @@
 package org.eclipse.jetty.websocket.javax.tests.server.sockets.partial;
 
 import java.io.IOException;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.websocket.javax.tests.server.sockets.TrackingSocket;
 
 @ServerEndpoint("/echo/partial/tracking")

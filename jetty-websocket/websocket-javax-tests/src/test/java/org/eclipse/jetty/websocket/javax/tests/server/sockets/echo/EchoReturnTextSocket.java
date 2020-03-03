@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets.echo;
 
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint("/echo/text/return")
 public class EchoReturnTextSocket

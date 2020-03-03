@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
-import javax.websocket.OnClose;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnClose;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/invalid")
 public class InvalidCloseIntSocket extends TrackingSocket

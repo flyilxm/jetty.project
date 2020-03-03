@@ -18,7 +18,7 @@
 
 package org.eclipse.jetty.websocket.javax.common;
 
-import javax.websocket.EndpointConfig;
+import jakarta.websocket.EndpointConfig;
 
 /**
  * Associate a JSR Endpoint with its optional {@link EndpointConfig}

@@ -18,10 +18,9 @@
 
 package org.eclipse.jetty.websocket.javax.server.internal;
 
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.server.ServerEndpoint;
-
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.http.pathmap.UriTemplatePathSpec;
 import org.eclipse.jetty.websocket.core.FrameHandler;
 import org.eclipse.jetty.websocket.javax.client.JavaxWebSocketClientFrameHandlerFactory;
@@ -41,7 +40,7 @@ public class JavaxWebSocketServerFrameHandlerFactory extends JavaxWebSocketClien
     @Override
     public JavaxWebSocketFrameHandlerMetadata getMetadata(Class<?> endpointClass, EndpointConfig endpointConfig)
     {
-        if (javax.websocket.Endpoint.class.isAssignableFrom(endpointClass))
+        if (jakarta.websocket.Endpoint.class.isAssignableFrom(endpointClass))
         {
             return createEndpointMetadata((Class<? extends Endpoint>)endpointClass, endpointConfig);
         }

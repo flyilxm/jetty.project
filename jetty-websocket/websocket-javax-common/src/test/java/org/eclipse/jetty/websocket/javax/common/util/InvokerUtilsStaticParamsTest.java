@@ -23,8 +23,8 @@ import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-import javax.websocket.Session;
 
+import jakarta.websocket.Session;
 import org.eclipse.jetty.util.annotation.Name;
 import org.eclipse.jetty.websocket.javax.common.JavaxWebSocketFrameHandlerFactory;
 import org.eclipse.jetty.websocket.util.InvokerUtils;

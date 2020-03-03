@@ -32,16 +32,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import javax.websocket.CloseReason;
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.PongMessage;
-import javax.websocket.Session;
 
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.OnClose;
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.PongMessage;
+import jakarta.websocket.Session;
 import org.eclipse.jetty.http.pathmap.UriTemplatePathSpec;
 import org.eclipse.jetty.websocket.core.CoreSession;
 import org.eclipse.jetty.websocket.javax.common.decoders.AvailableDecoders;
@@ -385,23 +385,23 @@ public abstract class JavaxWebSocketFrameHandlerFactory
         }
     }
 
-    protected JavaxWebSocketFrameHandlerMetadata createEndpointMetadata(Class<? extends javax.websocket.Endpoint> endpointClass, EndpointConfig endpointConfig)
+    protected JavaxWebSocketFrameHandlerMetadata createEndpointMetadata(Class<? extends jakarta.websocket.Endpoint> endpointClass, EndpointConfig endpointConfig)
     {
         JavaxWebSocketFrameHandlerMetadata metadata = new JavaxWebSocketFrameHandlerMetadata(endpointConfig);
         MethodHandles.Lookup lookup = getMethodHandleLookup(endpointClass);
 
         Method openMethod = ReflectUtils.findMethod(endpointClass, "onOpen",
-            javax.websocket.Session.class, javax.websocket.EndpointConfig.class);
+            jakarta.websocket.Session.class, jakarta.websocket.EndpointConfig.class);
         MethodHandle open = toMethodHandle(lookup, openMethod);
         metadata.setOpenHandler(open, openMethod);
 
         Method closeMethod = ReflectUtils.findMethod(endpointClass, "onClose",
-            javax.websocket.Session.class, javax.websocket.CloseReason.class);
+            jakarta.websocket.Session.class, jakarta.websocket.CloseReason.class);
         MethodHandle close = toMethodHandle(lookup, closeMethod);
         metadata.setCloseHandler(close, closeMethod);
 
         Method errorMethod = ReflectUtils.findMethod(endpointClass, "onError",
-            javax.websocket.Session.class, Throwable.class);
+            jakarta.websocket.Session.class, Throwable.class);
         MethodHandle error = toMethodHandle(lookup, errorMethod);
         metadata.setErrorHandler(error, errorMethod);
 

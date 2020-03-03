@@ -18,7 +18,7 @@
 
 package org.eclipse.jetty.websocket.javax.common.handlers;
 
-import javax.websocket.MessageHandler;
+import jakarta.websocket.MessageHandler;
 
 public class LongMessageHandler implements MessageHandler.Whole<Long>
 {

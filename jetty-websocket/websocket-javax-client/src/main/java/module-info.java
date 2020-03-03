@@ -16,8 +16,7 @@
 // ========================================================================
 //
 
-import javax.websocket.ContainerProvider;
-
+import jakarta.websocket.ContainerProvider;
 import org.eclipse.jetty.websocket.javax.client.JavaxWebSocketClientContainerProvider;
 
 module org.eclipse.jetty.websocket.javax.client

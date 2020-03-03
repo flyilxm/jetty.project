@@ -18,9 +18,9 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
-import javax.websocket.CloseReason;
-import javax.websocket.OnOpen;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.CloseReason;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/invalid")
 public class InvalidOpenCloseReasonSocket extends TrackingSocket

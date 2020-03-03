@@ -18,9 +18,9 @@
 
 package org.eclipse.jetty.websocket.javax.tests;
 
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.Session;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.Session;
 
 public class DummyEndpoint extends Endpoint
 {

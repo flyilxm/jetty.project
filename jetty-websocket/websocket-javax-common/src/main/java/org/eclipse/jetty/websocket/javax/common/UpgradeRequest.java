@@ -24,14 +24,14 @@ import java.security.Principal;
 public interface UpgradeRequest
 {
     /**
-     * For {@link javax.websocket.Session#getUserPrincipal()}
+     * For {@link jakarta.websocket.Session#getUserPrincipal()}
      *
      * @return the User {@link Principal} present during the Upgrade Request
      */
     Principal getUserPrincipal();
 
     /**
-     * For obtaining {@link javax.websocket.server.PathParam} values from Request URI path
+     * For obtaining {@link jakarta.websocket.server.PathParam} values from Request URI path
      *
      * @return the request URI
      */

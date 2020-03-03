@@ -21,9 +21,9 @@ package org.eclipse.jetty.websocket.javax.tests.quotes;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.websocket.core.CloseStatus;
 import org.eclipse.jetty.websocket.core.Frame;
 import org.eclipse.jetty.websocket.core.OpCode;
@@ -39,7 +39,7 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
 
 /**
- * Tests a {@link javax.websocket.Decoder.TextStream} automatic decoding to a Socket onMessage parameter
+ * Tests a {@link jakarta.websocket.Decoder.TextStream} automatic decoding to a Socket onMessage parameter
  */
 public class QuotesDecoderTextStreamTest
 {

@@ -20,7 +20,8 @@ package org.eclipse.jetty.websocket.javax.tests.server;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.websocket.server.ServerContainer;
+
+import jakarta.websocket.server.ServerContainer;
 
 /**
  * Configure the Large Text Message Size via the Container

@@ -19,7 +19,8 @@
 package org.eclipse.jetty.websocket.javax.common.handlers;
 
 import java.io.InputStream;
-import javax.websocket.MessageHandler;
+
+import jakarta.websocket.MessageHandler;
 
 public class InputStreamWholeHandler implements MessageHandler.Whole<InputStream>
 {

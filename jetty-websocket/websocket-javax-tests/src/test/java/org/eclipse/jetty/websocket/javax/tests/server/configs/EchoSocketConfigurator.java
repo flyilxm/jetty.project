@@ -19,9 +19,10 @@
 package org.eclipse.jetty.websocket.javax.tests.server.configs;
 
 import java.util.Collections;
-import javax.websocket.HandshakeResponse;
-import javax.websocket.server.HandshakeRequest;
-import javax.websocket.server.ServerEndpointConfig;
+
+import jakarta.websocket.HandshakeResponse;
+import jakarta.websocket.server.HandshakeRequest;
+import jakarta.websocket.server.ServerEndpointConfig;
 
 public class EchoSocketConfigurator extends ServerEndpointConfig.Configurator
 {

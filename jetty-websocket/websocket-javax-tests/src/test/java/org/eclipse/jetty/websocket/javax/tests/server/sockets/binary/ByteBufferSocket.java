@@ -20,11 +20,11 @@ package org.eclipse.jetty.websocket.javax.tests.server.sockets.binary;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.toolchain.test.StackUtils;
 import org.eclipse.jetty.util.BufferUtil;
 import org.eclipse.jetty.util.log.Log;

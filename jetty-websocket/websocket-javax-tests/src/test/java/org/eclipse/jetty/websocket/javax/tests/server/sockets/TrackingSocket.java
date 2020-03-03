@@ -21,7 +21,8 @@ package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingDeque;
-import javax.websocket.CloseReason;
+
+import jakarta.websocket.CloseReason;
 
 public abstract class TrackingSocket
 {

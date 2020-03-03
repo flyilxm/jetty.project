@@ -20,8 +20,8 @@ package org.eclipse.jetty.websocket.javax.tests.server;
 
 import java.util.Iterator;
 import java.util.ServiceLoader;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.websocket.javax.server.config.ContainerDefaultConfigurator;
 import org.junit.jupiter.api.Test;
 
@@ -38,7 +38,7 @@ public class JettyServerEndpointConfiguratorTest
     @Test
     public void testServiceLoader()
     {
-        ServiceLoader<ServerEndpointConfig.Configurator> loader = ServiceLoader.load(javax.websocket.server.ServerEndpointConfig.Configurator.class);
+        ServiceLoader<ServerEndpointConfig.Configurator> loader = ServiceLoader.load(jakarta.websocket.server.ServerEndpointConfig.Configurator.class);
         assertThat("loader", loader, notNullValue());
         Iterator<ServerEndpointConfig.Configurator> iter = loader.iterator();
         assertThat("loader.iterator", iter, notNullValue());

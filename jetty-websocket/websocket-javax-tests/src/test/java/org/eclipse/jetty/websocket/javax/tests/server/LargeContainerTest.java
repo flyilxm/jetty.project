@@ -42,7 +42,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 /**
- * Test Echo of Large messages, targeting the {@link javax.websocket.WebSocketContainer#setDefaultMaxTextMessageBufferSize(int)} functionality
+ * Test Echo of Large messages, targeting the {@link jakarta.websocket.WebSocketContainer#setDefaultMaxTextMessageBufferSize(int)} functionality
  */
 @ExtendWith(WorkDirExtension.class)
 public class LargeContainerTest

@@ -28,14 +28,14 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.function.Function;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.DeploymentException;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.Extension;
-import javax.websocket.Session;
 
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.Extension;
+import jakarta.websocket.Session;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.util.annotation.ManagedObject;
 import org.eclipse.jetty.websocket.core.WebSocketComponents;
@@ -47,12 +47,12 @@ import org.eclipse.jetty.websocket.javax.common.JavaxWebSocketFrameHandler;
 import org.eclipse.jetty.websocket.javax.common.JavaxWebSocketFrameHandlerFactory;
 
 /**
- * Container for Client use of the javax.websocket API.
+ * Container for Client use of the jakarta.websocket API.
  * <p>
  * This should be specific to a JVM if run in a standalone mode. or specific to a WebAppContext if running on the Jetty server.
  */
 @ManagedObject("JSR356 Client Container")
-public class JavaxWebSocketClientContainer extends JavaxWebSocketContainer implements javax.websocket.WebSocketContainer
+public class JavaxWebSocketClientContainer extends JavaxWebSocketContainer implements jakarta.websocket.WebSocketContainer
 {
     protected WebSocketCoreClient coreClient;
     protected Function<WebSocketComponents, WebSocketCoreClient> coreClientFactory;
@@ -64,7 +64,7 @@ public class JavaxWebSocketClientContainer extends JavaxWebSocketContainer imple
     }
 
     /**
-     * Create a {@link javax.websocket.WebSocketContainer} using the supplied
+     * Create a {@link jakarta.websocket.WebSocketContainer} using the supplied
      * {@link HttpClient} for environments where you want to configure
      * SSL/TLS or Proxy behaviors.
      *

@@ -20,8 +20,9 @@ package org.eclipse.jetty.websocket.javax.tests.coders;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.websocket.DecodeException;
-import javax.websocket.EndpointConfig;
+
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.EndpointConfig;
 
 public class FruitDecoder implements ExtDecoder<Fruit>
 {

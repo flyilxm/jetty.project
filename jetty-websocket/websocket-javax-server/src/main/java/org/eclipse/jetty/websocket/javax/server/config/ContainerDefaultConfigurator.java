@@ -21,19 +21,19 @@ package org.eclipse.jetty.websocket.javax.server.config;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ServiceLoader;
-import javax.websocket.Extension;
-import javax.websocket.HandshakeResponse;
-import javax.websocket.server.HandshakeRequest;
-import javax.websocket.server.ServerEndpointConfig;
-import javax.websocket.server.ServerEndpointConfig.Configurator;
 
+import jakarta.websocket.Extension;
+import jakarta.websocket.HandshakeResponse;
+import jakarta.websocket.server.HandshakeRequest;
+import jakarta.websocket.server.ServerEndpointConfig;
+import jakarta.websocket.server.ServerEndpointConfig.Configurator;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
 
 /**
  * The "Container Default Configurator" per the JSR-356 spec.
  *
- * @see ServiceLoader behavior of {@link javax.websocket.server.ServerEndpointConfig.Configurator}
+ * @see ServiceLoader behavior of {@link jakarta.websocket.server.ServerEndpointConfig.Configurator}
  */
 public final class ContainerDefaultConfigurator extends Configurator
 {
@@ -42,7 +42,7 @@ public final class ContainerDefaultConfigurator extends Configurator
 
     /**
      * Default Constructor required, as
-     * javax.websocket.server.ServerEndpointConfig$Configurator.fetchContainerDefaultConfigurator()
+     * jakarta.websocket.server.ServerEndpointConfig$Configurator.fetchContainerDefaultConfigurator()
      * will be the one that instantiates this class in most cases.
      */
     public ContainerDefaultConfigurator()

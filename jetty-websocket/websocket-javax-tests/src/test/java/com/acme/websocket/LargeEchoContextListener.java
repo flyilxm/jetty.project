@@ -20,7 +20,8 @@ package com.acme.websocket;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.websocket.server.ServerContainer;
+
+import jakarta.websocket.server.ServerContainer;
 
 public class LargeEchoContextListener implements ServletContextListener
 {

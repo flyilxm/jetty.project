@@ -20,11 +20,11 @@ package org.eclipse.jetty.websocket.javax.server.browser;
 
 import java.util.Collections;
 import java.util.List;
-import javax.websocket.Extension;
-import javax.websocket.HandshakeResponse;
-import javax.websocket.server.HandshakeRequest;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.Extension;
+import jakarta.websocket.HandshakeResponse;
+import jakarta.websocket.server.HandshakeRequest;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.http.QuotedCSV;
 
 public class JsrBrowserConfigurator extends ServerEndpointConfig.Configurator

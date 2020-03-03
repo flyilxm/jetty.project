@@ -20,9 +20,9 @@ package examples;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.WebSocketContainer;
 
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.WebSocketContainer;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.http.HttpClientTransportOverHTTP;
 import org.eclipse.jetty.io.ClientConnector;
@@ -56,7 +56,7 @@ public class SecureClientContainerExample
         }
         finally
         {
-            /* Since javax.websocket clients have no defined LifeCycle we
+            /* Since jakarta.websocket clients have no defined LifeCycle we
              * want to either close/stop the client, or exit the JVM
              * via a System.exit(), otherwise the threads this client keeps
              * open will prevent the JVM from terminating naturally.
@@ -67,11 +67,11 @@ public class SecureClientContainerExample
     }
 
     /**
-     * Since javax.websocket does not have an API for configuring SSL, each implementation
-     * of javax.websocket has to come up with their own SSL configuration mechanism.
+     * Since jakarta.websocket does not have an API for configuring SSL, each implementation
+     * of jakarta.websocket has to come up with their own SSL configuration mechanism.
      *
      * @return the client WebSocketContainer
-     * @see <a href="https://github.com/eclipse-ee4j/websocket-api/issues/210">javax.websocket issue #210</a>
+     * @see <a href="https://github.com/eclipse-ee4j/websocket-api/issues/210">jakarta.websocket issue #210</a>
      */
     public static WebSocketContainer getConfiguredWebSocketContainer() throws Exception
     {

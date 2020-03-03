@@ -19,10 +19,10 @@
 package org.eclipse.jetty.websocket.javax.tests.matchers;
 
 import java.util.Map;
-import javax.websocket.Decoder;
-import javax.websocket.MessageHandler;
-import javax.websocket.PongMessage;
 
+import jakarta.websocket.Decoder;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.PongMessage;
 import org.eclipse.jetty.websocket.javax.common.JavaxWebSocketSession;
 import org.eclipse.jetty.websocket.javax.common.RegisteredMessageHandler;
 import org.eclipse.jetty.websocket.javax.common.decoders.AvailableDecoders;

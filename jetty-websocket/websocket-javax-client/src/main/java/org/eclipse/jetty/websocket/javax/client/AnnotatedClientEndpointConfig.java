@@ -20,9 +20,9 @@ package org.eclipse.jetty.websocket.javax.client;
 
 import java.util.Collections;
 import java.util.List;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.ClientEndpointConfig;
 
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.ClientEndpointConfig;
 import org.eclipse.jetty.websocket.javax.common.ClientEndpointConfigWrapper;
 import org.eclipse.jetty.websocket.util.InvalidWebSocketException;
 

@@ -18,10 +18,10 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets.idletimeout;
 
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/idle-onopen-socket")
 public class OnOpenIdleTimeoutSocket

@@ -18,10 +18,10 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets.idletimeout;
 
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.Session;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.Session;
 
 public class OnOpenIdleTimeoutEndpoint extends Endpoint implements MessageHandler.Whole<String>
 {

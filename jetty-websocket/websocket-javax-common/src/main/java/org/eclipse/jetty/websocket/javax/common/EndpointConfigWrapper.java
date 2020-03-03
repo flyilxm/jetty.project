@@ -21,9 +21,10 @@ package org.eclipse.jetty.websocket.javax.common;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import javax.websocket.Decoder;
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
+
+import jakarta.websocket.Decoder;
+import jakarta.websocket.Encoder;
+import jakarta.websocket.EndpointConfig;
 
 public abstract class EndpointConfigWrapper implements EndpointConfig, PathParamProvider
 {

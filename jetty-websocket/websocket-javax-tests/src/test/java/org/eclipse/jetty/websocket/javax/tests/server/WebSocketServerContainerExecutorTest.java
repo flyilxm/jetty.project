@@ -30,16 +30,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.ContainerProvider;
-import javax.websocket.EndpointConfig;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -122,9 +122,9 @@ public class WebSocketServerContainerExecutorTest
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
         {
             // Server specific technique
-            javax.websocket.server.ServerContainer container =
-                (javax.websocket.server.ServerContainer)
-                    req.getServletContext().getAttribute("javax.websocket.server.ServerContainer");
+            jakarta.websocket.server.ServerContainer container =
+                (jakarta.websocket.server.ServerContainer)
+                    req.getServletContext().getAttribute("jakarta.websocket.server.ServerContainer");
             try
             {
                 URI wsURI = WSURI.toWebsocket(req.getRequestURL()).resolve("/echo");

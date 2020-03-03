@@ -18,11 +18,10 @@
 
 package org.eclipse.jetty.websocket.javax.common;
 
-import javax.websocket.ClientEndpoint;
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-
+import jakarta.websocket.ClientEndpoint;
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
 import org.eclipse.jetty.websocket.util.InvokerUtils;
 
 public class DummyFrameHandlerFactory extends JavaxWebSocketFrameHandlerFactory
@@ -41,7 +40,7 @@ public class DummyFrameHandlerFactory extends JavaxWebSocketFrameHandlerFactory
     @Override
     public JavaxWebSocketFrameHandlerMetadata getMetadata(Class<?> endpointClass, EndpointConfig endpointConfig)
     {
-        if (javax.websocket.Endpoint.class.isAssignableFrom(endpointClass))
+        if (jakarta.websocket.Endpoint.class.isAssignableFrom(endpointClass))
         {
             return createEndpointMetadata((Class<? extends Endpoint>)endpointClass, endpointConfig);
         }

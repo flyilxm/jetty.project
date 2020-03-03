@@ -28,9 +28,9 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
 
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
 import org.eclipse.jetty.websocket.javax.common.InitException;
 import org.eclipse.jetty.websocket.util.InvalidSignatureException;
 import org.eclipse.jetty.websocket.util.InvalidWebSocketException;
@@ -42,7 +42,7 @@ public class AvailableDecoders implements Iterable<AvailableDecoders.RegisteredD
     {
         // The user supplied Decoder class
         public final Class<? extends Decoder> decoder;
-        // The javax.websocket.Decoder.* type (eg: Decoder.Binary, Decoder.BinaryStream, Decoder.Text, Decoder.TextStream)
+        // The jakarta.websocket.Decoder.* type (eg: Decoder.Binary, Decoder.BinaryStream, Decoder.Text, Decoder.TextStream)
         public final Class<? extends Decoder> interfaceType;
         public final Class<?> objectType;
         public final boolean primitive;

@@ -22,11 +22,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerContainer;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerContainer;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
 import org.eclipse.jetty.websocket.core.CloseStatus;
@@ -41,7 +41,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 /**
- * Test various {@link javax.websocket.Decoder.Text Decoder.Text} / {@link javax.websocket.Encoder.Text Encoder.Text} echo behavior of Java Primitives
+ * Test various {@link jakarta.websocket.Decoder.Text Decoder.Text} / {@link jakarta.websocket.Encoder.Text Encoder.Text} echo behavior of Java Primitives
  */
 public class PrimitivesTextEchoTest
 {

@@ -8,7 +8,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>websocket-javax-tests</artifactId>
-  <name>Jetty :: Websocket :: javax.websocket :: Tests</name>
+  <name>Jetty :: Websocket :: jakarta.websocket :: Tests</name>
 
   <properties>
     <bundle-symbolic-name>${project.groupId}.javax.tests</bundle-symbolic-name>
@@ -32,7 +32,7 @@
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty.toolchain</groupId>
-      <artifactId>jetty-javax-websocket-api</artifactId>
+      <artifactId>jetty-jakarta-websocket-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty.toolchain</groupId>
@@ -57,7 +57,7 @@
             </goals>
             <configuration>
               <instructions>
-                <Bundle-Description>javax.websocket Integration Tests</Bundle-Description>
+                <Bundle-Description>jakarta.websocket Integration Tests</Bundle-Description>
                 <Export-Package>
                   org.eclipse.jetty.websocket.javax.tests.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"
                 </Export-Package>

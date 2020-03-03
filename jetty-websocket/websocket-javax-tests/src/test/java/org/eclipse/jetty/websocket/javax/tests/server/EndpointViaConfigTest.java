@@ -43,8 +43,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 /**
- * Example of an {@link javax.websocket.Endpoint} extended echo server added programmatically via the
- * {@link javax.websocket.server.ServerContainer#addEndpoint(javax.websocket.server.ServerEndpointConfig)}
+ * Example of an {@link jakarta.websocket.Endpoint} extended echo server added programmatically via the
+ * {@link jakarta.websocket.server.ServerContainer#addEndpoint(jakarta.websocket.server.ServerEndpointConfig)}
  */
 @ExtendWith(WorkDirExtension.class)
 public class EndpointViaConfigTest
@@ -58,7 +58,7 @@ public class EndpointViaConfigTest
     {
         WSServer wsb = new WSServer(testdir.getPath(), "app");
         wsb.copyWebInf("basic-echo-endpoint-config-web.xml");
-        // the endpoint (extends javax.websocket.Endpoint)
+        // the endpoint (extends jakarta.websocket.Endpoint)
         wsb.copyClass(BasicEchoEndpoint.class);
         // the configuration (adds the endpoint)
         wsb.copyClass(BasicEchoEndpointConfigContextListener.class);

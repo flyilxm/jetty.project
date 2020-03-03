@@ -23,10 +23,10 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.server.ServerEndpoint;
 
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 import org.eclipse.jetty.toolchain.test.Hex;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
@@ -42,7 +42,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 /**
- * Test various {@link javax.websocket.Decoder.Binary Decoder.Binary} / {@link javax.websocket.Encoder.Binary Encoder.Binary} echo behavior of Java Primitives
+ * Test various {@link jakarta.websocket.Decoder.Binary Decoder.Binary} / {@link jakarta.websocket.Encoder.Binary Encoder.Binary} echo behavior of Java Primitives
  */
 public class PrimitivesBinaryEchoTest
 {

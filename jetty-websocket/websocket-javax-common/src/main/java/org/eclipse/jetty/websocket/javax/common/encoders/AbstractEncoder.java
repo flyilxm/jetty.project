@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.common.encoders;
 
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
+import jakarta.websocket.Encoder;
+import jakarta.websocket.EndpointConfig;
 
 public abstract class AbstractEncoder implements Encoder
 {

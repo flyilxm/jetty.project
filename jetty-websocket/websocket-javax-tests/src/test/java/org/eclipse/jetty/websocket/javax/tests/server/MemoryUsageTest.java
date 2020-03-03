@@ -24,14 +24,14 @@ import java.lang.management.MemoryUsage;
 import java.net.URI;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ContainerProvider;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -49,7 +49,7 @@ public class MemoryUsageTest
 {
     public static class BasicEndpoint extends Endpoint implements MessageHandler.Whole<String>
     {
-        private javax.websocket.Session session;
+        private jakarta.websocket.Session session;
 
         @Override
         public void onMessage(String msg)
@@ -59,7 +59,7 @@ public class MemoryUsageTest
         }
 
         @Override
-        public void onOpen(javax.websocket.Session session, EndpointConfig config)
+        public void onOpen(jakarta.websocket.Session session, EndpointConfig config)
         {
             this.session = session;
             this.session.addMessageHandler(this);

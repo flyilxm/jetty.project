@@ -19,12 +19,12 @@
 package org.eclipse.jetty.websocket.javax.tests.server.sockets.pong;
 
 import java.nio.charset.StandardCharsets;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.PongMessage;
-import javax.websocket.Session;
 
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.PongMessage;
+import jakarta.websocket.Session;
 import org.eclipse.jetty.util.BufferUtil;
 
 public class PongMessageEndpoint extends Endpoint implements MessageHandler.Whole<PongMessage>

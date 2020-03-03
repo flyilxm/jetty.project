@@ -18,8 +18,7 @@
 
 package org.eclipse.jetty.websocket.javax.tests;
 
-import javax.websocket.MessageHandler;
-
+import jakarta.websocket.MessageHandler;
 import org.eclipse.jetty.websocket.javax.common.JavaxWebSocketSession;
 import org.eclipse.jetty.websocket.javax.tests.matchers.IsMessageHandlerType;
 import org.eclipse.jetty.websocket.javax.tests.matchers.IsMessageHandlerTypeRegistered;

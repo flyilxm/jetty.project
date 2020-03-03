@@ -43,9 +43,9 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 /**
- * Utility to build out exploded directory WebApps, in the /target/tests/ directory, for testing out servers that use javax.websocket endpoints.
+ * Utility to build out exploded directory WebApps, in the /target/tests/ directory, for testing out servers that use jakarta.websocket endpoints.
  * <p>
- * This is particularly useful when the WebSocket endpoints are discovered via the javax.websocket annotation scanning.
+ * This is particularly useful when the WebSocket endpoints are discovered via the jakarta.websocket annotation scanning.
  */
 public class WSServer extends LocalServer implements LocalFuzzer.Provider
 {

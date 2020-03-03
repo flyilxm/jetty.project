@@ -20,14 +20,14 @@ package org.eclipse.jetty.websocket.javax.tests.server;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.websocket.DeploymentException;
-import javax.websocket.server.ServerContainer;
-import javax.websocket.server.ServerEndpointConfig;
 
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.server.ServerContainer;
+import jakarta.websocket.server.ServerEndpointConfig;
 import org.eclipse.jetty.websocket.javax.tests.server.sockets.echo.BasicEchoSocket;
 
 /**
- * Example of adding a server socket (which extends {@link javax.websocket.Endpoint}) programmatically via the {@link ServerContainer#addEndpoint(ServerEndpointConfig)}
+ * Example of adding a server socket (which extends {@link jakarta.websocket.Endpoint}) programmatically via the {@link ServerContainer#addEndpoint(ServerEndpointConfig)}
  */
 public class BasicEchoSocketConfigContextListener implements ServletContextListener
 {

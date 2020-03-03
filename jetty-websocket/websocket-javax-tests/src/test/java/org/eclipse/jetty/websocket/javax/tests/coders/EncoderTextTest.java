@@ -24,7 +24,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
 /**
- * Test various {@link javax.websocket.Encoder.Text} scenarios
+ * Test various {@link jakarta.websocket.Encoder.Text} scenarios
  */
 public class EncoderTextTest
 {

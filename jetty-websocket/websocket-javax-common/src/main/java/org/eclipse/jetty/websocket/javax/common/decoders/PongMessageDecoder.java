@@ -19,10 +19,10 @@
 package org.eclipse.jetty.websocket.javax.common.decoders;
 
 import java.nio.ByteBuffer;
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
-import javax.websocket.PongMessage;
 
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.PongMessage;
 import org.eclipse.jetty.util.BufferUtil;
 
 public class PongMessageDecoder extends AbstractDecoder implements Decoder.Binary<PongMessage>

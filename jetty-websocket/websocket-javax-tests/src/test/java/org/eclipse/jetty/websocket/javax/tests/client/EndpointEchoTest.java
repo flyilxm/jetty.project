@@ -19,12 +19,12 @@
 package org.eclipse.jetty.websocket.javax.tests.client;
 
 import java.util.concurrent.TimeUnit;
-import javax.websocket.ContainerProvider;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
 
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
 import org.eclipse.jetty.websocket.javax.common.JavaxWebSocketSession;
 import org.eclipse.jetty.websocket.javax.tests.LocalServer;
 import org.eclipse.jetty.websocket.javax.tests.WSEndpointTracker;
@@ -75,7 +75,7 @@ public class EndpointEchoTest
     {
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
         ClientEndpoint clientEndpoint = new ClientEndpoint();
-        assertThat(clientEndpoint, Matchers.instanceOf(javax.websocket.Endpoint.class));
+        assertThat(clientEndpoint, Matchers.instanceOf(jakarta.websocket.Endpoint.class));
         // Issue connect using instance of class that extends Endpoint
         Session session = container.connectToServer(clientEndpoint, null, server.getWsUri().resolve("/echo/text"));
         session.getBasicRemote().sendText("Echo");

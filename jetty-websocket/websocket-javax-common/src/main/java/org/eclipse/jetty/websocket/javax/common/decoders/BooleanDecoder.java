@@ -18,11 +18,11 @@
 
 package org.eclipse.jetty.websocket.javax.common.decoders;
 
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
 
 /**
- * Default implementation of the {@link javax.websocket.Decoder.Text} Message to {@link Boolean} decoder.
+ * Default implementation of the {@link jakarta.websocket.Decoder.Text} Message to {@link Boolean} decoder.
  * <p>
  * Note: delegates to {@link Boolean#parseBoolean(String)} and will only support "true" and "false" as boolean values.
  */

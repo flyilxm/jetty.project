@@ -21,8 +21,8 @@ package org.eclipse.jetty.websocket.javax.tests.coders;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
-import javax.websocket.DecodeException;
 
+import jakarta.websocket.DecodeException;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

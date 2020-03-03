@@ -203,7 +203,7 @@
             </goals>
             <configuration>
               <includeGroupIds>org.eclipse.jetty.toolchain</includeGroupIds>
-              <includeArtifactIds>jetty-javax-websocket-api</includeArtifactIds>
+              <includeArtifactIds>jetty-jakarta-websocket-api</includeArtifactIds>
               <includeTypes>jar</includeTypes>
               <outputDirectory>${assembly-directory}/lib/websocket</outputDirectory>
             </configuration>
@@ -216,7 +216,7 @@
             </goals>
             <configuration>
               <includeGroupIds>org.eclipse.jetty.toolchain</includeGroupIds>
-              <includeArtifactIds>jetty-javax-websocket-api</includeArtifactIds>
+              <includeArtifactIds>jetty-jakarta-websocket-api</includeArtifactIds>
               <includeTypes>jar</includeTypes>
               <classifier>sources</classifier>
               <outputDirectory>${source-assembly-directory}/lib/websocket</outputDirectory>

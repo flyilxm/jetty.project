@@ -21,10 +21,10 @@ package org.eclipse.jetty.websocket.javax.tests.quotes;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
 
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
 

@@ -18,8 +18,8 @@
 
 package org.eclipse.jetty.websocket.javax.tests.server.sockets;
 
-import javax.websocket.OnOpen;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/invalid")
 public class InvalidOpenIntSocket extends TrackingSocket

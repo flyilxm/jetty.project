@@ -18,11 +18,11 @@
 
 package org.eclipse.jetty.websocket.javax.common.decoders;
 
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
 
 /**
- * Default implementation of the {@link javax.websocket.Decoder.Text} Message to {@link Character} decoder
+ * Default implementation of the {@link jakarta.websocket.Decoder.Text} Message to {@link Character} decoder
  */
 public class CharacterDecoder extends AbstractDecoder implements Decoder.Text<Character>
 {
