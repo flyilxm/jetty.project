@@ -305,13 +305,13 @@ public class LocalServer extends ContainerLifeCycle implements LocalFuzzer.Provi
         private BlockingArrayQueue<JakartaWebSocketSession> closedSessions = new BlockingArrayQueue<>();
 
         @Override
-        public void onJavaxWebSocketSessionOpened(JakartaWebSocketSession session)
+        public void onJakartaWebSocketSessionOpened(JakartaWebSocketSession session)
         {
             openedSessions.offer(session);
         }
 
         @Override
-        public void onJavaxWebSocketSessionClosed(JakartaWebSocketSession session)
+        public void onJakartaWebSocketSessionClosed(JakartaWebSocketSession session)
         {
             closedSessions.offer(session);
         }

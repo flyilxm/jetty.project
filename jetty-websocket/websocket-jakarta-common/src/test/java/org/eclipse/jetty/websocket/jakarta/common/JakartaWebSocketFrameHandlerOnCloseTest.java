@@ -35,7 +35,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 
-public class JakartaWebSocketFrameHandlerOnCloseTest extends AbstractJavaxWebSocketFrameHandlerTest
+public class JakartaWebSocketFrameHandlerOnCloseTest extends AbstractJakartaWebSocketFrameHandlerTest
 {
     private static final String EXPECTED_REASON = "CloseReason[1000,Normal]";
 
@@ -89,7 +89,7 @@ public class JakartaWebSocketFrameHandlerOnCloseTest extends AbstractJavaxWebSoc
     {
         assertOnCloseInvocation(new CloseSessionSocket(),
             allOf(
-                containsString("onClose(JavaxWebSocketSession@"),
+                containsString("onClose(JakartaWebSocketSession@"),
                 containsString(CloseSessionSocket.class.getName())
             ));
     }
@@ -126,7 +126,7 @@ public class JakartaWebSocketFrameHandlerOnCloseTest extends AbstractJavaxWebSoc
     {
         assertOnCloseInvocation(new CloseSessionReasonSocket(),
             allOf(
-                containsString("onClose(JavaxWebSocketSession@"),
+                containsString("onClose(JakartaWebSocketSession@"),
                 containsString(CloseSessionReasonSocket.class.getName())
             ));
     }

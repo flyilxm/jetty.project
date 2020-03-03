@@ -50,7 +50,7 @@ public class JakartaWebSocketServletContainerInitializer implements ServletConta
      * The ServletContext attribute key name for the
      * ServerContainer per jakarta.websocket spec 1.0 final section 6.4 Programmatic Server Deployment
      */
-    public static final String ATTR_JAVAX_SERVER_CONTAINER = jakarta.websocket.server.ServerContainer.class.getName();
+    public static final String ATTR_JAKARTA_SERVER_CONTAINER = jakarta.websocket.server.ServerContainer.class.getName();
 
     public static final String ENABLE_KEY = "org.eclipse.jetty.websocket.jakarta";
     public static final String HTTPCLIENT_ATTRIBUTE = "org.eclipse.jetty.websocket.jakarta.HttpClient";
@@ -175,11 +175,11 @@ public class JakartaWebSocketServletContainerInitializer implements ServletConta
 
         if (!websocketEnabled)
         {
-            LOG.info("Javax Websocket is disabled by configuration for context {}", context.getContextPath());
+            LOG.info("Jakarta Websocket is disabled by configuration for context {}", context.getContextPath());
             return;
         }
 
-        ServletContextHandler servletContextHandler = ServletContextHandler.getServletContextHandler(context, "Javax WebSocket SCI");
+        ServletContextHandler servletContextHandler = ServletContextHandler.getServletContextHandler(context, "Jakarta WebSocket SCI");
         ServerContainer container = initialize(servletContextHandler);
 
         try (ThreadClassLoaderScope scope = new ThreadClassLoaderScope(context.getClassLoader()))

@@ -32,7 +32,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 
-public class JakartaWebSocketFrameHandlerOnErrorTest extends AbstractJavaxWebSocketFrameHandlerTest
+public class JakartaWebSocketFrameHandlerOnErrorTest extends AbstractJakartaWebSocketFrameHandlerTest
 {
     private static final String EXPECTED_THROWABLE = "java.lang.RuntimeException: From Testcase";
 
@@ -62,7 +62,7 @@ public class JakartaWebSocketFrameHandlerOnErrorTest extends AbstractJavaxWebSoc
     {
         assertOnErrorInvocation(new ErrorSessionThrowableSocket(),
             allOf(
-                containsString("onError(JavaxWebSocketSession@"),
+                containsString("onError(JakartaWebSocketSession@"),
                 containsString(ErrorSessionThrowableSocket.class.getName()),
                 containsString(EXPECTED_THROWABLE)
             ));

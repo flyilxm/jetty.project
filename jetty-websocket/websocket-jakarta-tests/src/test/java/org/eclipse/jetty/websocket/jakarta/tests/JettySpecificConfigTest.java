@@ -134,9 +134,9 @@ public class JettySpecificConfigTest
         Session session = container.connectToServer(clientEndpoint, serverUri);
 
         // Check correct client config is set.
-        JakartaWebSocketSession javaxSession = (JakartaWebSocketSession)session;
-        assertThat(javaxSession.getCoreSession().isAutoFragment(), is(false));
-        assertThat(javaxSession.getCoreSession().getMaxFrameSize(), is(1337L));
+        JakartaWebSocketSession jakartaSession = (JakartaWebSocketSession)session;
+        assertThat(jakartaSession.getCoreSession().isAutoFragment(), is(false));
+        assertThat(jakartaSession.getCoreSession().getMaxFrameSize(), is(1337L));
 
         // Send and receive an echo.
         session.getBasicRemote().sendText("echo");

@@ -84,7 +84,7 @@ public class JakartaWebSocketServerContainer extends JakartaWebSocketClientConta
 
                     // create the core client
                     coreClient = new WebSocketCoreClient(httpClient, wsComponents);
-                    coreClient.getHttpClient().setName("Javax-WebSocketClient@" + Integer.toHexString(coreClient.getHttpClient().hashCode()));
+                    coreClient.getHttpClient().setName("Jakarta-WebSocketClient@" + Integer.toHexString(coreClient.getHttpClient().hashCode()));
                     if (executor != null && httpClient == null)
                         coreClient.getHttpClient().setExecutor(executor);
                     servletContext.setAttribute(WebSocketCoreClient.WEBSOCKET_CORECLIENT_ATTRIBUTE, coreClient);

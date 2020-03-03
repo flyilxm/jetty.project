@@ -39,7 +39,7 @@ import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class JakartaWebSocketFrameHandlerOnMessageTextTest extends AbstractJavaxWebSocketFrameHandlerTest
+public class JakartaWebSocketFrameHandlerOnMessageTextTest extends AbstractJakartaWebSocketFrameHandlerTest
 {
     private void onText(TrackingSocket socket, String msg) throws Exception
     {
@@ -133,7 +133,7 @@ public class JakartaWebSocketFrameHandlerOnMessageTextTest extends AbstractJavax
     {
         assertOnMessageInvocation(new MessageSessionTextSocket(),
             allOf(
-                containsString("onMessage(JavaxWebSocketSession@"),
+                containsString("onMessage(JakartaWebSocketSession@"),
                 containsString(MessageSessionTextSocket.class.getName()),
                 containsString(", Hello World)")
             ));

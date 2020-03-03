@@ -41,13 +41,13 @@ public class SessionTracker extends AbstractLifeCycle implements JakartaWebSocke
     }
 
     @Override
-    public void onJavaxWebSocketSessionOpened(JakartaWebSocketSession session)
+    public void onJakartaWebSocketSessionOpened(JakartaWebSocketSession session)
     {
         sessions.add(session);
     }
 
     @Override
-    public void onJavaxWebSocketSessionClosed(JakartaWebSocketSession session)
+    public void onJakartaWebSocketSessionClosed(JakartaWebSocketSession session)
     {
         sessions.remove(session);
     }

@@ -215,7 +215,7 @@ public class JakartaWebSocketSession implements jakarta.websocket.Session
      *
      * @param obj the return object
      */
-    @SuppressWarnings("unused") // used by JavaxWebSocketFrameHandlerFactory via MethodHandle
+    @SuppressWarnings("unused") // used by Jakarta WebSocketFrameHandlerFactory via MethodHandle
     public void filterReturnType(Object obj)
     {
         if (obj != null)

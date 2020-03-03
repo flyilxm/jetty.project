@@ -58,6 +58,6 @@ public class JakartaWebSocketClientFrameHandlerFactory extends JakartaWebSocketF
         }
 
         JakartaWebSocketFrameHandlerMetadata metadata = new JakartaWebSocketFrameHandlerMetadata(endpointConfig);
-        return discoverJavaxFrameHandlerMetadata(endpointClass, metadata);
+        return discoverJakartaFrameHandlerMetadata(endpointClass, metadata);
     }
 }

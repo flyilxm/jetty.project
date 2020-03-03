@@ -40,7 +40,7 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class JakartaWebSocketFrameHandlerOnMessageBinaryTest extends AbstractJavaxWebSocketFrameHandlerTest
+public class JakartaWebSocketFrameHandlerOnMessageBinaryTest extends AbstractJakartaWebSocketFrameHandlerTest
 {
     private void assertOnMessageInvocation(TrackingSocket socket, Matcher<String> eventMatcher) throws Exception
     {
@@ -111,7 +111,7 @@ public class JakartaWebSocketFrameHandlerOnMessageBinaryTest extends AbstractJav
         assertThrows(InvalidSignatureException.class, () ->
             assertOnMessageInvocation(new MessageSessionSocket(),
                 allOf(
-                    containsString("onMessage(JavaxWebSocketSession@"),
+                    containsString("onMessage(JakartaWebSocketSession@"),
                     containsString(MessageSessionSocket.class.getName())
                 ))
         );
@@ -132,7 +132,7 @@ public class JakartaWebSocketFrameHandlerOnMessageBinaryTest extends AbstractJav
     {
         assertOnMessageInvocation(new MessageSessionByteBufferSocket(),
             allOf(
-                containsString("onMessage(JavaxWebSocketSession@"),
+                containsString("onMessage(JakartaWebSocketSession@"),
                 containsString(MessageSessionByteBufferSocket.class.getName())
             ));
     }

@@ -36,7 +36,7 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class JakartaWebSocketFrameHandlerOnMessageBinaryStreamTest extends AbstractJavaxWebSocketFrameHandlerTest
+public class JakartaWebSocketFrameHandlerOnMessageBinaryStreamTest extends AbstractJakartaWebSocketFrameHandlerTest
 {
     @SuppressWarnings("Duplicates")
     private TrackingSocket performOnMessageInvocation(TrackingSocket socket, Function<JakartaWebSocketFrameHandler, Void> func) throws Exception

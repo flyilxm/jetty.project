@@ -155,7 +155,7 @@ public abstract class JakartaWebSocketContainer extends ContainerLifeCycle imple
 
     public JakartaWebSocketFrameHandler newFrameHandler(Object websocketPojo, UpgradeRequest upgradeRequest)
     {
-        return getFrameHandlerFactory().newJavaxWebSocketFrameHandler(websocketPojo, upgradeRequest);
+        return getFrameHandlerFactory().newJakartaWebSocketFrameHandler(websocketPojo, upgradeRequest);
     }
 
     /**

@@ -23,7 +23,7 @@
     <module>websocket-jetty-client</module>
     <module>websocket-jetty-server</module>
     <module>websocket-jetty-tests</module>
-    <!-- Javax WebSocket Implementation -->
+    <!-- Jakarta WebSocket Implementation -->
     <module>websocket-jakarta-common</module>
     <module>websocket-jakarta-client</module>
     <module>websocket-jakarta-server</module>

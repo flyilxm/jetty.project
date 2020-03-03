@@ -83,7 +83,7 @@ public class JakartaWebSocketFrameHandler implements FrameHandler
      * </p>
      * <p>
      * The values are represented as {@link String} and are essentially static for this
-     * instance of the the JavaxWebSocketFrameHandler.   They will be converted to the
+     * instance of the the JakartaWebSocketFrameHandler.   They will be converted to the
      * type declared by the {@code @PathParam} annotations following the JSR356 advice
      * to only support String, Java Primitives (or their Boxed version).
      * </p>
@@ -197,7 +197,7 @@ public class JakartaWebSocketFrameHandler implements FrameHandler
             if (openHandle != null)
                 openHandle.invoke();
 
-            container.notifySessionListeners((listener) -> listener.onJavaxWebSocketSessionOpened(session));
+            container.notifySessionListeners((listener) -> listener.onJakartaWebSocketSessionOpened(session));
             callback.succeeded();
         }
         catch (Throwable cause)
@@ -291,7 +291,7 @@ public class JakartaWebSocketFrameHandler implements FrameHandler
     public void onClosed(CloseStatus closeStatus, Callback callback)
     {
         notifyOnClose(closeStatus, callback);
-        container.notifySessionListeners((listener) -> listener.onJavaxWebSocketSessionClosed(session));
+        container.notifySessionListeners((listener) -> listener.onJakartaWebSocketSessionClosed(session));
     }
 
     private void notifyOnClose(CloseStatus closeStatus, Callback callback)

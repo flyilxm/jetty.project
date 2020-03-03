@@ -54,12 +54,12 @@ public class JakartaWebSocketServerFrameHandlerFactory extends JakartaWebSocketC
         UriTemplatePathSpec templatePathSpec = new UriTemplatePathSpec(anno.value());
         JakartaWebSocketFrameHandlerMetadata metadata = new JakartaWebSocketFrameHandlerMetadata(endpointConfig);
         metadata.setUriTemplatePathSpec(templatePathSpec);
-        return discoverJavaxFrameHandlerMetadata(endpointClass, metadata);
+        return discoverJakartaFrameHandlerMetadata(endpointClass, metadata);
     }
 
     @Override
     public FrameHandler newFrameHandler(Object websocketPojo, ServletUpgradeRequest upgradeRequest, ServletUpgradeResponse upgradeResponse)
     {
-        return newJavaxWebSocketFrameHandler(websocketPojo, new JakartaServerUpgradeRequest(upgradeRequest));
+        return newJakartaWebSocketFrameHandler(websocketPojo, new JakartaServerUpgradeRequest(upgradeRequest));
     }
 }

@@ -79,7 +79,7 @@ public class AnnotatedServerEndpointConfig extends ServerEndpointConfigWrapper
         ServerEndpointConfig.Configurator rawConfigurator = getConfigurator(baseServerConfig, anno);
         ServerEndpointConfig.Configurator configurator = containerScope.getObjectFactory().decorate(rawConfigurator);
 
-        // Build a ServerEndpointConfig with the Javax API builder to wrap.
+        // Build a ServerEndpointConfig with the Jakarta API builder to wrap.
         ServerEndpointConfig endpointConfig = ServerEndpointConfig.Builder.create(endpointClass, path)
             .configurator(configurator)
             .encoders(encoders)

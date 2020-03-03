@@ -75,7 +75,7 @@ public class JakartaWebSocketClientContainer extends JakartaWebSocketContainer i
         this(new WebSocketComponents(), (wsComponents) ->
         {
             WebSocketCoreClient coreClient = new WebSocketCoreClient(httpClient, wsComponents);
-            coreClient.getHttpClient().setName("Javax-WebSocketClient@" + Integer.toHexString(coreClient.getHttpClient().hashCode()));
+            coreClient.getHttpClient().setName("Jakarta-WebSocketClient@" + Integer.toHexString(coreClient.getHttpClient().hashCode()));
             return coreClient;
         });
     }
@@ -85,7 +85,7 @@ public class JakartaWebSocketClientContainer extends JakartaWebSocketContainer i
         this(components, (wsComponents) ->
         {
             WebSocketCoreClient coreClient = new WebSocketCoreClient(wsComponents);
-            coreClient.getHttpClient().setName("Javax-WebSocketClient@" + Integer.toHexString(coreClient.getHttpClient().hashCode()));
+            coreClient.getHttpClient().setName("Jakarta-WebSocketClient@" + Integer.toHexString(coreClient.getHttpClient().hashCode()));
             return coreClient;
         });
     }

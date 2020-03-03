@@ -76,7 +76,7 @@ public class ContainerProviderServerTest
     }
 
     @Test
-    public void testJavaxWsContainerInServer() throws Exception
+    public void testJakartaWsContainerInServer() throws Exception
     {
         WebSocketContainer client = ContainerProvider.getWebSocketContainer();
         EventSocket clientSocket = new EventSocket();

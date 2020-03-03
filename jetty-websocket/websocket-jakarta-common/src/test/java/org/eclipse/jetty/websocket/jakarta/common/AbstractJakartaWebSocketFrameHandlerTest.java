@@ -29,7 +29,7 @@ import org.eclipse.jetty.websocket.jakarta.common.encoders.AvailableEncoders;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
-public abstract class AbstractJavaxWebSocketFrameHandlerTest
+public abstract class AbstractJakartaWebSocketFrameHandlerTest
 {
     protected static DummyContainer container;
 
@@ -52,7 +52,7 @@ public abstract class AbstractJavaxWebSocketFrameHandlerTest
     protected EndpointConfig endpointConfig;
     protected CoreSession coreSession = new CoreSession.Empty();
 
-    public AbstractJavaxWebSocketFrameHandlerTest()
+    public AbstractJakartaWebSocketFrameHandlerTest()
     {
         endpointConfig = ClientEndpointConfig.Builder.create().build();
         encoders = new AvailableEncoders(endpointConfig);
@@ -65,6 +65,6 @@ public abstract class AbstractJavaxWebSocketFrameHandlerTest
         JakartaWebSocketFrameHandlerFactory factory = container.getFrameHandlerFactory();
         ConfiguredEndpoint endpoint = new ConfiguredEndpoint(websocket, endpointConfig);
         UpgradeRequest upgradeRequest = new UpgradeRequestAdapter();
-        return factory.newJavaxWebSocketFrameHandler(endpoint, upgradeRequest);
+        return factory.newJakartaWebSocketFrameHandler(endpoint, upgradeRequest);
     }
 }

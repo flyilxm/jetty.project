@@ -146,7 +146,7 @@ public abstract class JakartaWebSocketFrameHandlerFactory
 
     public abstract EndpointConfig newDefaultEndpointConfig(Class<?> endpointClass, String path);
 
-    public JakartaWebSocketFrameHandler newJavaxWebSocketFrameHandler(Object endpointInstance, UpgradeRequest upgradeRequest)
+    public JakartaWebSocketFrameHandler newJakartaWebSocketFrameHandler(Object endpointInstance, UpgradeRequest upgradeRequest)
     {
         Object endpoint;
         EndpointConfig config;
@@ -364,10 +364,10 @@ public abstract class JakartaWebSocketFrameHandlerFactory
 
         // Technique from  https://stackoverflow.com/questions/48505787/methodhandle-with-general-non-void-return-filter
 
-        // Change the return type of the to be Object so it will match exact with JavaxWebSocketSession.filterReturnType(Object)
+        // Change the return type of the to be Object so it will match exact with JakartaWebSocketSession.filterReturnType(Object)
         handle = handle.asType(handle.type().changeReturnType(Object.class));
 
-        // Filter the method return type to a call to JavaxWebSocketSession.filterReturnType() bound to this session
+        // Filter the method return type to a call to JakartaWebSocketSession.filterReturnType() bound to this session
         handle = MethodHandles.filterReturnValue(handle, FILTER_RETURN_TYPE_METHOD.bindTo(session));
 
         return handle;
@@ -408,7 +408,7 @@ public abstract class JakartaWebSocketFrameHandlerFactory
         return metadata;
     }
 
-    protected JakartaWebSocketFrameHandlerMetadata discoverJavaxFrameHandlerMetadata(Class<?> endpointClass, JakartaWebSocketFrameHandlerMetadata metadata)
+    protected JakartaWebSocketFrameHandlerMetadata discoverJakartaFrameHandlerMetadata(Class<?> endpointClass, JakartaWebSocketFrameHandlerMetadata metadata)
     {
         MethodHandles.Lookup lookup = getMethodHandleLookup(endpointClass);
         Method onmethod;

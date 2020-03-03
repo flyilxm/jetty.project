@@ -20,7 +20,7 @@ package org.eclipse.jetty.websocket.jakarta.common;
 
 public interface JakartaWebSocketSessionListener
 {
-    void onJavaxWebSocketSessionOpened(JakartaWebSocketSession session);
+    void onJakartaWebSocketSessionOpened(JakartaWebSocketSession session);
 
-    void onJavaxWebSocketSessionClosed(JakartaWebSocketSession session);
+    void onJakartaWebSocketSessionClosed(JakartaWebSocketSession session);
 }

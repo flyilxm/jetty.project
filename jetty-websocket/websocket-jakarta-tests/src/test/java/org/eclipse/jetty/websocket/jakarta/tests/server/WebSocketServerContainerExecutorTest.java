@@ -142,7 +142,7 @@ public class WebSocketServerContainerExecutorTest
         }
     }
 
-    private Executor getJavaxServerContainerExecutor(ServletContextHandler servletContextHandler)
+    private Executor getJakartaServerContainerExecutor(ServletContextHandler servletContextHandler)
     {
         JakartaWebSocketServerContainer serverContainer = JakartaWebSocketServerContainer.getContainer(
             servletContextHandler.getServletContext());
@@ -161,7 +161,7 @@ public class WebSocketServerContainerExecutorTest
 
         //set httpClient on server
         HttpClient httpClient = new HttpClient();
-        httpClient.setName("Javax-WebSocketServer@" + Integer.toHexString(httpClient.hashCode()));
+        httpClient.setName("Jakarta-WebSocketServer@" + Integer.toHexString(httpClient.hashCode()));
         httpClient.setExecutor(executor);
         server.addBean(httpClient, true);
         server.setAttribute(HTTPCLIENT_ATTRIBUTE, httpClient);
@@ -177,7 +177,7 @@ public class WebSocketServerContainerExecutorTest
             String response = doGet(server.getURI().resolve("/connect"));
             assertThat("Response", response, startsWith("Connected to ws://"));
 
-            Executor containerExecutor = getJavaxServerContainerExecutor(contextHandler);
+            Executor containerExecutor = getJakartaServerContainerExecutor(contextHandler);
             assertThat(containerExecutor, sameInstance(executor));
         }
         finally
@@ -206,7 +206,7 @@ public class WebSocketServerContainerExecutorTest
             String response = doGet(server.getURI().resolve("/connect"));
             assertThat("Response", response, startsWith("Connected to ws://"));
 
-            Executor containerExecutor = getJavaxServerContainerExecutor(contextHandler);
+            Executor containerExecutor = getJakartaServerContainerExecutor(contextHandler);
             assertThat(containerExecutor, sameInstance(executor));
         }
         finally
