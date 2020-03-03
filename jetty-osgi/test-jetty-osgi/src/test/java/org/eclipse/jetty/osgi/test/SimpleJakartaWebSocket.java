@@ -32,7 +32,7 @@ import static org.junit.Assert.fail;
 
 @ClientEndpoint(
     subprotocols = {"chat"})
-public class SimpleJavaxWebSocket
+public class SimpleJakartaWebSocket
 {
     private Session session;
     public CountDownLatch messageLatch = new CountDownLatch(1);

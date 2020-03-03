@@ -47,7 +47,7 @@ import static org.ops4j.pax.exam.CoreOptions.systemProperty;
  * Test using websocket in osgi
  */
 @RunWith(PaxExam.class)
-public class TestJettyOSGiBootWithJavaxWebSocket
+public class TestJettyOSGiBootWithJakartaWebSocket
 {
     private static final String LOG_LEVEL = "WARN";
 
@@ -60,7 +60,7 @@ public class TestJettyOSGiBootWithJavaxWebSocket
         ArrayList<Option> options = new ArrayList<>();
         // options.add(TestOSGiUtil.optionalRemoteDebug());
         options.add(CoreOptions.junitBundles());
-        options.addAll(TestOSGiUtil.configureJettyHomeAndPort(false, "jetty-http-boot-with-javax-websocket.xml"));
+        options.addAll(TestOSGiUtil.configureJettyHomeAndPort(false, "jetty-http-boot-with-jakarta-websocket.xml"));
         options.add(CoreOptions.bootDelegationPackages("org.xml.sax", "org.xml.*", "org.w3c.*", "javax.sql.*", "javax.xml.*", "javax.activation.*"));
         options.add(CoreOptions.systemPackages("com.sun.org.apache.xalan.internal.res", "com.sun.org.apache.xml.internal.utils",
             "com.sun.org.apache.xml.internal.utils", "com.sun.org.apache.xpath.internal",
@@ -121,7 +121,7 @@ public class TestJettyOSGiBootWithJavaxWebSocket
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
         assertNotNull(container);
 
-        SimpleJavaxWebSocket socket = new SimpleJavaxWebSocket();
+        SimpleJakartaWebSocket socket = new SimpleJakartaWebSocket();
         URI uri = new URI("ws://127.0.0.1:" + port + "/jakarta.websocket/");
         try (Session session = container.connectToServer(socket, uri))
         {

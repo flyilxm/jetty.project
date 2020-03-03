@@ -30,7 +30,7 @@ import org.eclipse.jetty.websocket.jakarta.server.config.JakartaWebSocketServlet
 /**
  * Example of setting up a jakarta.websocket server with Jetty embedded
  */
-public class WebSocketJsrServer
+public class WebSocketJakartaServer
 {
     /**
      * A server socket endpoint

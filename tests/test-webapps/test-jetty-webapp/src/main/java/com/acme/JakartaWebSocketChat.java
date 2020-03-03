@@ -32,9 +32,9 @@ import jakarta.websocket.Session;
 import jakarta.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/jakarta.websocket/", subprotocols = {"chat"})
-public class JavaxWebSocketChat
+public class JakartaWebSocketChat
 {
-    private static final List<JavaxWebSocketChat> members = new CopyOnWriteArrayList<>();
+    private static final List<JakartaWebSocketChat> members = new CopyOnWriteArrayList<>();
 
     volatile Session session;
     volatile RemoteEndpoint.Async remote;
@@ -63,10 +63,10 @@ public class JavaxWebSocketChat
             return;
         }
 
-        ListIterator<JavaxWebSocketChat> iter = members.listIterator();
+        ListIterator<JakartaWebSocketChat> iter = members.listIterator();
         while (iter.hasNext())
         {
-            JavaxWebSocketChat member = iter.next();
+            JakartaWebSocketChat member = iter.next();
 
             // Test if member is now disconnected
             if (!member.session.isOpen())

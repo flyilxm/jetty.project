@@ -196,7 +196,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>copy-lib-javax-websocket-deps</id>
+            <id>copy-lib-jakarta-websocket-deps</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>copy-dependencies</goal>
@@ -209,7 +209,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>copy-lib-javax-websocket-src-deps</id>
+            <id>copy-lib-jakarta-websocket-src-deps</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>copy-dependencies</goal>

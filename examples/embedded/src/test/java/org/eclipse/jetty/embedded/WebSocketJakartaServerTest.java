@@ -39,14 +39,14 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class WebSocketJsrServerTest
+public class WebSocketJakartaServerTest
 {
     private Server server;
 
     @BeforeEach
     public void startServer() throws Exception
     {
-        server = WebSocketJsrServer.createServer(0);
+        server = WebSocketJakartaServer.createServer(0);
         server.start();
     }
 
@@ -59,15 +59,15 @@ public class WebSocketJsrServerTest
     @Test
     public void testGetEcho() throws Exception
     {
-        WebSocketContainer javaxWebSocketClient = ContainerProvider.getWebSocketContainer();
-        javaxWebSocketClient.setDefaultMaxSessionIdleTimeout(2000);
+        WebSocketContainer jakartaWebSocketClient = ContainerProvider.getWebSocketContainer();
+        jakartaWebSocketClient.setDefaultMaxSessionIdleTimeout(2000);
         try
         {
             URI wsUri = WSURI.toWebsocket(server.getURI().resolve("/echo"));
 
             TrackingClientEndpoint clientEndpoint = new TrackingClientEndpoint();
 
-            Session session = javaxWebSocketClient.connectToServer(clientEndpoint, null, wsUri);
+            Session session = jakartaWebSocketClient.connectToServer(clientEndpoint, null, wsUri);
             session.getBasicRemote().sendText("Hello World");
 
             String response = clientEndpoint.messages.poll(2, SECONDS);
@@ -75,7 +75,7 @@ public class WebSocketJsrServerTest
         }
         finally
         {
-            LifeCycle.stop(javaxWebSocketClient);
+            LifeCycle.stop(jakartaWebSocketClient);
         }
     }
 

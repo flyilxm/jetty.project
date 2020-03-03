@@ -113,12 +113,12 @@ Disable Websocket for a particular webapp:::
   This can be a significant impost if your webapp contains a lot of classes and/or jar files.
   To completely disable websockets and avoid all setup costs associated with it for a particular webapp, use instead the context attribute `org.eclipse.jetty.containerInitializerExclusionPattern`, described next, which allows you to exclude the websocket ServletContainerInitializer that causes the scanning.
 Completely disable Websocket for a particular webapp:::
-  Set the `org.eclipse.jetty.containerInitializerExclusionPattern` link:#context_attributes[context attribute] to include `org.eclipse.jetty.websocket.jakarta.server.JavaxWebSocketServletContainerInitializer`.
+  Set the `org.eclipse.jetty.containerInitializerExclusionPattern` link:#context_attributes[context attribute] to include `org.eclipse.jetty.websocket.jakarta.server.JakartaWebSocketServletContainerInitializer`.
   Here's an example of doing this in code, although you can do the link:#intro-jetty-configuration-webapps[same in xml]:
 +
 [source, java, subs="{sub-order}"]
 ----
 WebAppContext context = new WebAppContext();
 context.setAttribute("org.eclipse.jetty.containerInitializerExclusionPattern",
-                     "org.eclipse.jetty.websocket.jakarta.server.JavaxWebSocketServletContainerInitializer|com.acme.*");
+                     "org.eclipse.jetty.websocket.jakarta.server.JakartaWebSocketServletContainerInitializer|com.acme.*");
 ----
