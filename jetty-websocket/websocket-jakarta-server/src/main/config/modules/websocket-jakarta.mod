@@ -14,7 +14,7 @@ annotations
 lib/websocket/websocket-core-${jetty.version}.jar
 lib/websocket/websocket-util-${jetty.version}.jar
 lib/websocket/websocket-servlet-${jetty.version}.jar
-lib/websocket/jetty-jakarta-websocket-api-2.0.0-M1.jar
+lib/websocket/jetty-jakarta-websocket-api-2.0.0-SNAPSHOT.jar
 lib/websocket/websocket-jakarta-*.jar
 
 [jpms]
