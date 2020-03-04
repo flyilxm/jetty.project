@@ -1411,7 +1411,8 @@
     <profile>
       <id>snapshot-repositories</id>
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <!-- temporary until we get jetty-jakarta-api released -->
+        <activeByDefault>true</activeByDefault>
       </activation>
       <repositories>
         <repository>
