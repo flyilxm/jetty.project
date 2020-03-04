@@ -1422,6 +1422,9 @@
           <snapshots>
             <enabled>true</enabled>
           </snapshots>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
         </repository>
         <!--repository>
           <id>apache.snapshots</id>
