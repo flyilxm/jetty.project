@@ -70,7 +70,7 @@ public class JakartaWebSocketTest
         // to encourage client container to shutdown with server ...
         server.getServer().addBean(container, true);
 
-        JavaxSimpleEchoSocket socket = new JavaxSimpleEchoSocket();
+        JakartaSimpleEchoSocket socket = new JakartaSimpleEchoSocket();
         Session session = container.connectToServer(socket, uri);
         try
         {

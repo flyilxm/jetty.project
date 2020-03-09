@@ -32,11 +32,10 @@ import org.eclipse.jetty.util.log.Logger;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
-@ClientEndpoint(
-    subprotocols = {"chat"})
-public class JavaxSimpleEchoSocket
+@ClientEndpoint(subprotocols = {"chat"})
+public class JakartaSimpleEchoSocket
 {
-    private static final Logger LOG = Log.getLogger(JavaxSimpleEchoSocket.class);
+    private static final Logger LOG = Log.getLogger(JakartaSimpleEchoSocket.class);
     private Session session;
     public CountDownLatch messageLatch = new CountDownLatch(1);
     public CountDownLatch closeLatch = new CountDownLatch(1);
